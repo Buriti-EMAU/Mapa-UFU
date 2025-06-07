@@ -1,0 +1,4 @@
+# Ignore local configuration files
+js/config.js
+
+# Add other files/directories to ignore as needed

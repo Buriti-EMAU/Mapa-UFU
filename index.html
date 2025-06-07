@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#0056b3">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Mapa UFU - Campus Santa Mônica</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.12.0/mapbox-gl.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Preload critical images for faster mobile loading -->
+    <link rel="preload" as="image" href="data/places/biblioteca/Image_01.jpg">
+
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>Mapa UFU</h1>
+            <p>Campus Santa Mônica</p>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="caminhe.html">15 minutos de caminhada</a></li>
+                <li><a href="sobre.html">Sobre o EMAU</a></li>
+                <li><a href="contribua.html">Contribua com o Mapa</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Welcome Modal -->
+    <div class="modal-overlay" id="welcome-modal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="modal-header">
+                <h2>Bem-vindo ao Mapa UFU</h2>
+            </div>
+            <div class="modal-body">
+                <p>Olá! Bem-vindo ao <strong>Mapa UFU - Campus Santa Mônica</strong></p>
+                
+                <h3>Como usar:</h3>
+                <ul>
+                    <li>Navegue pelo mapa usando os controles de zoom ou arraste para explorar diferentes áreas</li>
+                    <li>Clique nos marcadores coloridos para ver detalhes sobre cada local</li>
+                    <li>Use os filtros para mostrar apenas as categorias que você procura</li>
+                    <li>Explore os edifícios em 3D para uma melhor visualização do campus</li>
+                </ul>
+
+                <h3> Vamos caminhar?</h3>
+                <ul>
+                    <li> Ao clicar nos marcadores, eles mostram até onde você pode ir em 15 minutos.</li>
+                    <li> Pode parecer pouco, mas 15 minutos (ou 30 - ida e volta) pode trazer inúmeros benefícios.</li>
+                    <li> Para saber mais, clique na aba "15 minutos de caminhada".</li>
+                </ul>
+                
+                <p>Este projeto foi desenvolvido pelo <strong>Escritório Modelo de Arquitetura e Urbanismo (EMAU)</strong> da UFU para facilitar a orientação espacial no campus.</p>
+                
+                <div class="modal-footer">
+                    <button class="btn primary-btn" id="start-exploring">Começar a Explorar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <div class="map-container">
+            <button class="filter-toggle-btn" id="filter-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="4" y1="21" x2="4" y2="14"></line>
+                    <line x1="4" y1="10" x2="4" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="12"></line>
+                    <line x1="12" y1="8" x2="12" y2="3"></line>
+                    <line x1="20" y1="21" x2="20" y2="16"></line>
+                    <line x1="20" y1="12" x2="20" y2="3"></line>
+                    <line x1="1" y1="14" x2="7" y2="14"></line>
+                    <line x1="9" y1="8" x2="15" y2="8"></line>
+                    <line x1="17" y1="16" x2="23" y2="16"></line>
+                </svg>
+            </button>
+            <div class="map-filters" id="map-filters">
+                <h3>Filtrar por categoria</h3>
+                <div class="filter-options">
+                    <label>
+                        <input type="checkbox" class="category-filter" value="Acadêmico" checked>
+                        <span class="category-color academic"></span>
+                        Acadêmico
+                    </label>
+                    <label>
+                        <input type="checkbox" class="category-filter" value="Alimentação" checked>
+                        <span class="category-color food"></span>
+                        Alimentação
+                    </label>
+                    <label>
+                        <input type="checkbox" class="category-filter" value="Administrativo" checked>
+                        <span class="category-color administrative"></span>
+                        Administrativo
+                    </label>
+                    <label>
+                        <input type="checkbox" class="category-filter" value="Lazer" checked>
+                        <span class="category-color leisure"></span>
+                        Lazer
+                    </label>
+                    <label>
+                        <input type="checkbox" class="category-filter" value="Serviços" checked>
+                        <span class="category-color services"></span>
+                        Serviços
+                    </label>
+                </div>
+            </div>
+            <div id="map"></div>
+        </div>
+        
+        <div class="place-details">
+            <div class="place-details-content">
+                <button class="close-details">&times;</button>
+                <div class="place-info">
+                    <h2 id="place-name"></h2>
+                    <p class="place-category"><span id="place-category"></span></p>
+                    <div class="place-rating">
+                        <span id="place-rating"></span>
+                        <div class="stars"></div>
+                    </div>
+                    <p id="place-description"></p>
+                </div>
+                <div class="place-images">
+                    <div class="image-gallery">
+                        <div class="main-image">
+                            <img id="main-image" src="" alt="">
+                        </div>
+                        <div class="thumbnail-container">
+                            <div class="thumbnail" data-index="0">
+                                <img id="thumb-1" src="" alt="">
+                            </div>
+                            <div class="thumbnail" data-index="1">
+                                <img id="thumb-2" src="" alt="">
+                            </div>
+                            <div class="thumbnail" data-index="2">
+                                <img id="thumb-3" src="" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Mapa UFU - Campus Santa Mônica. Todos os direitos reservados.</p>
+    </footer>
+    <script src="js/config.js"></script> 
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
