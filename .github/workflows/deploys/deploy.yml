@@ -1,0 +1,40 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # Ou o branch que você usa para deploy (ex: master)
+
+permissions:
+  contents: read # Necessário para checkout
+  pages: write    # Necessário para deploy no GitHub Pages
+  id-token: write # Necessário para deploy no GitHub Pages
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Create js/config.js
+        run: |
+          echo "export const MAPBOX_ACCESS_TOKEN = '${{ secrets.MAPBOX_ACCESS_TOKEN_SECRET }}';" > js/config.js
+        # Certifique-se que o nome do secret (MAPBOX_ACCESS_TOKEN_SECRET)
+        # corresponde ao que você configurou nas settings do repositório.
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Uploada o diretório raiz (ou o diretório que contém seu site)
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

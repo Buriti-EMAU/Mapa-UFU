@@ -1,8 +1,8 @@
+import { MAPBOX_ACCESS_TOKEN } from './config.js'; 
 
 if (typeof MAPBOX_ACCESS_TOKEN === 'undefined') {
     throw new Error("O Token de Acesso do Mapbox não está definido. Por favor, certifique-se de que o arquivo js/config.js foi criado, contém seu token e está incluído no seu HTML antes de main.js.");
 }
-const mapboxToken = MAPBOX_ACCESS_TOKEN;
 
 // Define os limites de Uberlândia para restringir a visualização do mapa
 const UBERLANDIA_BOUNDS = [
@@ -28,7 +28,7 @@ window.addEventListener('resize', function() {
 });
 
 // Inicialização do mapa com configurações específicas para dispositivos móveis
-mapboxgl.accessToken = mapboxToken;
+mapboxgl.accessToken = MAPBOX_ACCESS_TOKEN;
 const map = new mapboxgl.Map({
     container: 'map',
     // Usa um estilo que inclui dados de edifícios 3D
