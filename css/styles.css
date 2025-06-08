@@ -160,7 +160,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     color: var(--text-color);
-    line-height: 1.6;
+    line-height: 1.4;
     background-color: #f5f5f5;
 }
 
@@ -168,7 +168,7 @@ body {
 .header {
     background-color: var(--primary-color);
     color: var(--light-text);
-    padding: 1rem 2rem;
+    padding: 0rem 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -516,12 +516,14 @@ body {
         display: none; /* Hide the header on mobile */
     }
     
+
+    
     .logo h1 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
     
     .logo p {
-        font-size: 0.9rem;
+        font-size: 0.7rem;
     }
     
     .main-nav ul {
