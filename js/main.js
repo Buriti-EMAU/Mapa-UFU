@@ -262,8 +262,8 @@ async function fetchAndDisplayIsochrone(longitude, latitude) {
                 type: 'fill', // Tipo correto para polígonos preenchidos no Mapbox GL JS
                 source: ISOCHRONE_SOURCE_ID,
                 paint: {
-                    'fill-color': '#5a9fcf', // Um azul agradável para o polígono da isócrona
-                    'fill-opacity': 0.3
+                    'fill-color': '#5500cf', //Roxo
+                    'fill-opacity': 0.4
                 },
             }, getFirstSymbolLayerId());
             console.log("[Isochrone] Layer added:", ISOCHRONE_LAYER_ID);
@@ -291,9 +291,9 @@ function showPlaceDetails(place) {
     if (!isNaN(evaluation)) {
         document.getElementById('place-rating').textContent = evaluation.toFixed(1);
     } else {
-        document.getElementById('place-rating').textContent = "N/A";
+        document.getElementById('place-rating').textContent = "";
     }
-    document.getElementById('place-description').textContent = place.description;
+    document.getElementById('place-description').innerHTML = place.description;
     
     // Gera estrelas para a avaliação
     const starsContainer = document.querySelector('.stars');
@@ -318,7 +318,7 @@ function showPlaceDetails(place) {
             starsContainer.appendChild(star);
         }
     } else {
-        starsContainer.innerHTML = '<span>Sem avaliação</span>';
+        starsContainer.innerHTML = '<span>---</span>';
     }
     
     // Atualiza as imagens
@@ -524,7 +524,7 @@ map.on('load', () => {
                     14, 0,
                     16, ['get', 'min_height']
                 ],
-                'fill-extrusion-opacity': 0.8
+                'fill-extrusion-opacity': 0.9
             }
         });
         console.log('Successfully added OSM buildings layer with enhanced visibility');

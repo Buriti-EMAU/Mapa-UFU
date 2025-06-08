@@ -511,10 +511,7 @@ body {
 @media (max-width: 768px) {
     /* Header styles */
     .header {
-        flex-direction: column;
-        padding: 1rem;
-        position: relative;
-        z-index: 30;
+        display: none; /* Hide the header on mobile */
     }
     
     .logo h1 {
@@ -550,7 +547,8 @@ body {
     /* Main content layout */
     .main-content {
         flex-direction: column;
-        height: calc(100vh - 150px);
+        /* Adjust height to account for hidden header and footer height (approx 24px) */
+        height: calc(100vh - 24px); 
     }
     
     .map-container {
@@ -780,7 +778,8 @@ body {
     }
     
     .main-content {
-        height: calc(100vh - 140px);
+        /* Adjust height to account for hidden header and footer height (approx 24px) */
+        height: calc(100vh - 24px);
     }
     
     .map-container {
@@ -849,7 +848,8 @@ body {
     }
     
     .main-content {
-        height: calc(100vh - 100px);
+        /* Adjust height to account for hidden header and footer height (approx 24px) */
+        height: calc(100vh - 24px);
     }
     
     .map-container {
