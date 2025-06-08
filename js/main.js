@@ -1,4 +1,5 @@
 import { MAPBOX_ACCESS_TOKEN } from './config.js'; 
+console.log('MAPBOX_ACCESS_TOKEN:', MAPBOX_ACCESS_TOKEN);
 
 if (typeof MAPBOX_ACCESS_TOKEN === 'undefined') {
     throw new Error("O Token de Acesso do Mapbox não está definido. Por favor, certifique-se de que o arquivo js/config.js foi criado, contém seu token e está incluído no seu HTML antes de main.js.");
@@ -52,15 +53,18 @@ const map = new mapboxgl.Map({
 const categoryColors = {
     'Acadêmico': '#4285F4',
     'Alimentação': '#EA4335',
-    'Administrativo': '#34A853',
-    'Lazer': '#FBBC05',
-    'Serviços': '#9C27B0'
+    'Administrativo': '#34A853', // Kept for consistency if you add such places
+    'Lazer': '#FBBC05',         // Kept for consistency
+    'Serviços': '#9C27B0',      // Kept for consistency
+    'Bloco': '#00BFA5',         // New color for "Bloco"
+    'Papelaria': '#FFC107'      // New color for "Papelaria"
 };
 
 // Armazena todos os marcadores
 let markers = [];
 let places = [];
-let activeFilters = ['Acadêmico', 'Alimentação', 'Administrativo', 'Lazer', 'Serviços'];
+// Update activeFilters to include categories from your places.json by default
+let activeFilters = ['Acadêmico', 'Alimentação', 'Administrativo', 'Lazer', 'Serviços', 'Bloco', 'Papelaria'];
 let currentPlaceId;
 
 const ISOCHRONE_SOURCE_ID = 'isochrone-source';
@@ -70,7 +74,9 @@ const ISOCHRONE_LAYER_ID = 'isochrone-layer';
 async function loadPlacesData() {
     try {
         const response = await fetch('data/places.json');
+        console.log('Carregando dados dos locais:', response.status, response.statusText);
         places = await response.json();
+        console.log('Dados dos locais carregados:', places);
         addMarkersToMap();
     } catch (error) {
         console.error('Erro ao carregar dados dos locais:', error);
@@ -80,52 +86,9 @@ async function loadPlacesData() {
 }
 
 // Carrega dados de exemplo para desenvolvimento
+// This function is currently empty. If loadPlacesData fails, no markers will show.
 async function loadSampleData() {
-    places = [
-        {
-            id: 'biblioteca',
-            name: 'Biblioteca Central',
-            latitude: -18.918854,
-            longitude: -48.257977,
-            category: 'Acadêmico',
-            description: 'A Biblioteca Central Santa Mônica oferece um amplo acervo de livros, periódicos e recursos digitais para a comunidade acadêmica. Possui espaços para estudo individual e em grupo.',
-            evaluation: 4.5,
-            images: [
-                'data/places/biblioteca/Image_01.jpg',
-                'data/places/biblioteca/Image_02.jpg',
-                'data/places/biblioteca/Image_03.jpg'
-            ]
-        },
-        {
-            id: 'restaurante_universitario',
-            name: 'Restaurante Universitário',
-            latitude: -18.919523,
-            longitude: -48.259822,
-            category: 'Alimentação',
-            description: 'O Restaurante Universitário (RU) oferece refeições a preços acessíveis para estudantes e servidores. Serve café da manhã, almoço e jantar em dias úteis.',
-            evaluation: 4.2,
-            images: [
-                'data/places/restaurante_universitario/Image_01.jpg',
-                'data/places/restaurante_universitario/Image_02.jpg',
-                'data/places/restaurante_universitario/Image_03.jpg'
-            ]
-        },
-        {
-            id: 'bloco_1a',
-            name: 'Bloco 1A',
-            latitude: -18.917654,
-            longitude: -48.258123,
-            category: 'Acadêmico',
-            description: 'O Bloco 1A abriga salas de aula, laboratórios e gabinetes de professores da Faculdade de Engenharia Elétrica. Possui estrutura moderna para atividades de ensino e pesquisa.',
-            evaluation: 4.0,
-            images: [
-                'data/places/bloco_1a/Image_01.jpg',
-                'data/places/bloco_1a/Image_02.jpg',
-                'data/places/bloco_1a/Image_03.jpg'
-            ]
-        }
-    ];
-    addMarkersToMap();
+    console.warn("loadSampleData was called, but it's currently empty. No fallback data loaded.");
 }
 
 // Adiciona marcadores ao mapa
@@ -150,12 +113,14 @@ function addMarkersToMap() {
     }
 
     // Adiciona novos marcadores
+    console.log('Adding markers:', places);
     places.forEach(place => {
         if (activeFilters.includes(place.category)) {
             // Cria um elemento div simples para o marcador
             const el = document.createElement('div');
             el.className = 'marker';
-            el.style.backgroundColor = categoryColors[place.category];
+            // Ensure the category exists in categoryColors, otherwise use a default
+            el.style.backgroundColor = categoryColors[place.category] || '#CCCCCC'; // Default to gray if category color undefined
             el.style.width = isMobile ? '30px' : '20px';
             el.style.height = isMobile ? '30px' : '20px';
             el.style.borderRadius = '50%';
@@ -169,6 +134,30 @@ function addMarkersToMap() {
             })
             .setLngLat([place.longitude, place.latitude])
             .addTo(map);
+            console.log(`[Marker] Added marker for place: ${place.name} at [${place.longitude}, ${place.latitude}]`);
+            
+            // Create a popup, but don't add it to the map yet.
+            // This popup will be used for hover effects.
+            const hoverPopup = new mapboxgl.Popup({
+                closeButton: false, // No close button for hover popups
+                closeOnClick: false, // Don't close when the map is clicked
+                offset: isMobile ? [0, -25] : [0, -15] // Position above the marker [offsetX, offsetY]
+            });
+
+            marker.getElement().addEventListener('mouseenter', () => {
+                // Change the cursor style as a UI indicator.
+                map.getCanvas().style.cursor = 'pointer';
+
+                // Populate the popup and set its coordinates based on the marker's location.
+                hoverPopup.setLngLat(marker.getLngLat())
+                    .setHTML(`<strong>${place.name}</strong>`)
+                    .addTo(map);
+            });
+
+            marker.getElement().addEventListener('mouseleave', () => {
+                map.getCanvas().style.cursor = ''; // Reset cursor
+                hoverPopup.remove();
+            });
             
             // Adiciona evento de clique
             marker.getElement().addEventListener('click', () => {
@@ -217,7 +206,12 @@ async function fetchAndDisplayIsochrone(longitude, latitude) {
 
     const walkingTime = 14; // 14 minutos de distância a pé
     const profile = 'mapbox/walking'; // Perfil para caminhada
-    const apiUrl = `https://api.mapbox.com/isochrone/v1/${profile}/${longitude},${latitude}?contours_minutes=${walkingTime}&polygons=true&access_token=${mapboxToken}`;
+    // Ensure MAPBOX_ACCESS_TOKEN is used here, not an undefined mapboxToken
+    if (typeof MAPBOX_ACCESS_TOKEN === 'undefined') {
+        console.error("[Isochrone] MAPBOX_ACCESS_TOKEN is not defined!");
+        return;
+    }
+    const apiUrl = `https://api.mapbox.com/isochrone/v1/${profile}/${longitude},${latitude}?contours_minutes=${walkingTime}&polygons=true&access_token=${MAPBOX_ACCESS_TOKEN}`;
     console.log("[Isochrone] API URL:", apiUrl);
 
     try {
@@ -291,7 +285,13 @@ function showPlaceDetails(place) {
     // Atualiza as informações do local
     document.getElementById('place-name').textContent = place.name;
     document.getElementById('place-category').textContent = place.category;
-    document.getElementById('place-rating').textContent = place.evaluation.toFixed(1);
+    // Handle cases where evaluation might be empty or not a number
+    const evaluation = parseFloat(place.evaluation);
+    if (!isNaN(evaluation)) {
+        document.getElementById('place-rating').textContent = evaluation.toFixed(1);
+    } else {
+        document.getElementById('place-rating').textContent = "N/A";
+    }
     document.getElementById('place-description').textContent = place.description;
     
     // Gera estrelas para a avaliação
@@ -300,21 +300,24 @@ function showPlaceDetails(place) {
     
     const fullStars = Math.floor(place.evaluation);
     const hasHalfStar = place.evaluation % 1 >= 0.5;
-    
-    for (let i = 0; i < 5; i++) {
-        const star = document.createElement('span');
-        star.className = 'star';
-        
-        if (i < fullStars) {
-            star.innerHTML = '★';
-        } else if (i === fullStars && hasHalfStar) {
-            star.innerHTML = '★';
-            star.style.opacity = '0.5';
-        } else {
-            star.innerHTML = '☆';
+
+    if (!isNaN(evaluation)) {
+        for (let i = 0; i < 5; i++) {
+            const star = document.createElement('span');
+            star.className = 'star';
+            
+            if (i < fullStars) {
+                star.innerHTML = '★';
+            } else if (i === fullStars && hasHalfStar) {
+                star.innerHTML = '★'; // Or use a specific half-star icon/character
+                star.style.opacity = '0.5';
+            } else {
+                star.innerHTML = '☆';
+            }
+            starsContainer.appendChild(star);
         }
-        
-        starsContainer.appendChild(star);
+    } else {
+        starsContainer.innerHTML = '<span>Sem avaliação</span>';
     }
     
     // Atualiza as imagens
@@ -327,9 +330,15 @@ function showPlaceDetails(place) {
     const preloadImages = () => {
         return new Promise((resolve) => {
             let loadedCount = 0;
-            const totalImages = place.images.length;
+            const imagesToLoad = place.images || []; // Handle if place.images is undefined
+            const totalImages = imagesToLoad.length;
+
+            if (totalImages === 0) {
+                resolve(); // Resolve immediately if no images
+                return;
+            }
             
-            place.images.forEach((src, index) => {
+            imagesToLoad.forEach((src, index) => {
                 const img = new Image();
                 img.onload = () => {
                     loadedCount++;
@@ -343,7 +352,10 @@ function showPlaceDetails(place) {
                         resolve();
                     }
                 };
-                img.src = src;
+                // Prepend 'data/places/images/' or similar if image paths in JSON are relative to a subfolder
+                // Assuming images in places.json are at root for now, or you adjust paths here/in JSON
+                // For example, if images are in 'img/' folder: img.src = `img/${src}`;
+                img.src = `data/places/${src}`; // Assuming images are in an 'img' folder at the root
             });
             
             // Fallback caso as imagens não carreguem
@@ -353,20 +365,29 @@ function showPlaceDetails(place) {
     
     // Define as imagens após o pré-carregamento
     preloadImages().then(() => {
-        mainImage.src = place.images[0];
-        thumb1.src = place.images[0];
-        thumb2.src = place.images[1];
-        thumb3.src = place.images[2];
+        const images = place.images || [];
+        const imagePathPrefix = 'data/places/'; // Define this based on where your images are stored relative to index.html
+
+        mainImage.src = images.length > 0 ? `${imagePathPrefix}${images[0]}` : '';
+        mainImage.style.display = images.length > 0 ? 'block' : 'none';
+
+        const thumbElements = [thumb1, thumb2, thumb3];
+        thumbElements.forEach((thumbEl, index) => {
+            if (images.length > index) {
+                thumbEl.src = `${imagePathPrefix}${images[index]}`;
+                thumbEl.style.display = 'block';
+            } else {
+                thumbEl.src = '';
+                thumbEl.style.display = 'none';
+            }
+        });
         
         // Define a primeira miniatura como ativa
         const thumbnails = document.querySelectorAll('.thumbnail');
-        thumbnails.forEach((thumb, index) => {
-            if (index === 0) {
-                thumb.classList.add('active');
-            } else {
-                thumb.classList.remove('active');
-            }
-        });
+        thumbnails.forEach(t => t.classList.remove('active'));
+        if (images.length > 0 && thumb1.style.display !== 'none') {
+            thumb1.classList.add('active');
+        }
     });
     
     // Busca e exibe a isócrona de 10 minutos a pé
@@ -391,15 +412,19 @@ document.querySelector('.close-details').addEventListener('click', () => {
 // Lida com cliques nas miniaturas
 document.querySelectorAll('.thumbnail').forEach(thumb => {
     thumb.addEventListener('click', () => {
-        const index = thumb.getAttribute('data-index');
+        const index = parseInt(thumb.getAttribute('data-index'), 10); // Ensure index is a number
         const place = places.find(p => p.id === currentPlaceId);
+        const images = place ? (place.images || []) : [];
+        const imagePathPrefix = 'data/places/'; // Consistent with showPlaceDetails
         
-        if (place) {
-            document.getElementById('main-image').src = place.images[index];
+        if (place && index >= 0 && images.length > index) {
+            document.getElementById('main-image').src = `${imagePathPrefix}${images[index]}`;
             
             // Atualiza a miniatura ativa
             document.querySelectorAll('.thumbnail').forEach(t => t.classList.remove('active'));
             thumb.classList.add('active');
+        } else {
+            console.warn(`Thumbnail click: Image at index ${index} not found for place id ${currentPlaceId}`);
         }
     });
 });
@@ -599,12 +624,14 @@ function setupMobileInteractions() {
         if (width <= 480) {
             mapFilters.classList.remove('active');
             if (toggleButton) {
-                toggleButton.innerHTML = is3DView ? '2D' : '3D';
+                // is3DView is not defined in this scope. Use a global or passed state.
+                // Assuming is3DViewGlobal is defined at a higher scope
+                toggleButton.innerHTML = is3DViewGlobal ? '2D' : '3D';
             }
         } else if (width > 768) {
             mapFilters.classList.remove('active');
             if (toggleButton) {
-                toggleButton.innerHTML = is3DView ? 'Voltar para 2D' : 'Voltar para 3D';
+                toggleButton.innerHTML = is3DViewGlobal ? 'Voltar para 2D' : 'Voltar para 3D';
             }
         }
         
@@ -713,8 +740,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Adiciona o botão ao contêiner do mapa
     document.querySelector('.map-container').appendChild(toggleButton);
     
-    // Alterna a visualização 3D quando o botão é clicado
-    let is3DView = !isMobile; // Começa com 3D desligado em dispositivos móveis
+    // Use a globally accessible variable for 3D state, e.g., is3DViewGlobal
+    // let is3DView = !isMobile; // This creates a local variable, not accessible elsewhere
     
     // Adiciona ícone 3D para dispositivos móveis
     if (isMobile) {
@@ -741,9 +768,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     toggleButton.addEventListener('click', () => {
-        is3DView = !is3DView;
+        is3DViewGlobal = !is3DViewGlobal; // Toggle the global state
         
-        if (is3DView) {
+        if (is3DViewGlobal) {
             // Alterna para visualização 3D - usa configurações diferentes para dispositivos móveis
             map.easeTo({
                 pitch: isMobile ? 35 : 45, // Ângulo menos íngreme em dispositivos móveis
@@ -798,3 +825,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+// Declare is3DViewGlobal at a higher scope if it's to be used by adjustUIForScreenSize
+// and the 3D toggle button logic.
+let is3DViewGlobal = !isMobile; // Initial state

@@ -1,44 +1,520 @@
 [
-  {
-    "id": "biblioteca",
-    "name": "Biblioteca Central",
-    "latitude": -18.918854,
-    "longitude": -48.257977,
-    "category": "Acadêmico",
-    "description": "A Biblioteca Central Santa Mônica oferece um amplo acervo de livros, periódicos e recursos digitais para a comunidade acadêmica. Possui espaços para estudo individual e em grupo.",
-    "evaluation": 4.5,
-    "images": [
-      "data/places/biblioteca/Image_01.jpg",
-      "data/places/biblioteca/Image_02.jpg",
-      "data/places/biblioteca/Image_03.jpg"
-    ]
-  },
-  {
-    "id": "restaurante_universitario",
-    "name": "Restaurante Universitário",
-    "latitude": -18.919523,
-    "longitude": -48.259822,
-    "category": "Alimentação",
-    "description": "O Restaurante Universitário (RU) oferece refeições a preços acessíveis para estudantes e servidores. Serve café da manhã, almoço e jantar em dias úteis.",
-    "evaluation": 4.2,
-    "images": [
-      "data/places/restaurante_universitario/Image_01.jpg",
-      "data/places/restaurante_universitario/Image_02.jpg",
-      "data/places/restaurante_universitario/Image_03.jpg"
-    ]
-  },
-  {
-    "id": "bloco_1a",
-    "name": "Bloco 1A",
-    "latitude": -18.917654,
-    "longitude": -48.258123,
-    "category": "Acadêmico",
-    "description": "O Bloco 1A abriga salas de aula, laboratórios e gabinetes de professores da Faculdade de Engenharia Elétrica. Possui estrutura moderna para atividades de ensino e pesquisa.",
-    "evaluation": 4.0,
-    "images": [
-      "data/places/bloco_1a/Image_01.jpg",
-      "data/places/bloco_1a/Image_02.jpg",
-      "data/places/bloco_1a/Image_03.jpg"
-    ]
-  }
+    {
+        "name": "1I",
+        "evaluation": "",
+        "category": "-18.91840620063481",
+        "latitude": "-48.255469707542986",
+        "longitude": "Bloco",
+        "description": "Conhecido como o \"bloco das artes\", ele abriga a parte administrativa dos cursos de Artes Visuais, Arquitetura e Urbanismo e Design, além de várias salas de aula e laboratórios desses cursos. Dentro do bloco, tem uma sala de exposições — o Aquário — onde rolam várias mostras com trabalhos dos alunos. E não para por aí: os próprios corredores também viram espaço de expressão artística, cheios de criações espalhadas pelo bloco.\n\nLá sempre tem rolê da arquitetura vendendo caipirinha boa e barata #sarrau",
+        "images": [
+            "1I/colagem_1I.png",
+            "1I/Imagem do WhatsApp de 2025-05-28 à(s) 15.15.48_ad676a83.jpg",
+            "1I/Imagem do WhatsApp de 2025-05-28 à(s) 15.15.48_cf5107e5.jpg",
+            "1I/Prancheta 3.png"
+        ],
+        "id": "1I"
+    },
+    {
+        "name": "1Y",
+        "evaluation": "",
+        "category": "-18.9189972131125",
+        "latitude": "-48.25590275582151",
+        "longitude": "Bloco",
+        "description": "O 1Y é o bloco da Engenharia Civil, no seu térreo encontram-se vários laboratórios do curso e também um auditório, já no seu pavimento superior ficam as salas dos professores e a parte administrativa da FECIV.",
+        "images": [
+            "1Y/Captura de tela 2025-05-28 193705.png",
+            "1Y/colagens_mapaufu.png",
+            "1Y/DSC_9484.jpg",
+            "1Y/labgeo2.png"
+        ],
+        "id": "1Y"
+    },
+    {
+        "name": "3Q",
+        "evaluation": "",
+        "category": "-18.917501712303665",
+        "latitude": "-48.25766501549685",
+        "longitude": "Bloco",
+        "description": "É o bloco mais movimentado da UFU, lá você vai encontrar gente de todos os cursos não importa o horário, são três andares de salas de aula e um auditório em que sempre tem eventos. Tem mesas pra aproveitar o intervalo tomando um cafezinho com pão de queijo, e ainda aproveitar pra descobrir das festas que vão rolar, já que as atléticas estão sempre por lá divulgando seu rolê.\n\n\nProva o pão de queijo com Nutella, você não vai se arrepender",
+        "images": [
+            "3Q/704092_fb566069540c4ca29edc131bc4b7cec6~mv2_d_4585_2847_s_4_2.png",
+            "3Q/Captura de tela 2025-05-28 195339.png",
+            "3Q/colagens_mapaufu (1).png",
+            "3Q/imagem_destaque_imagem_galeria_dsc_8582_0.jpg"
+        ],
+        "id": "3Q"
+    },
+    {
+        "name": "5OA",
+        "evaluation": "",
+        "category": "-18.917352430148515",
+        "latitude": "-48.25682675630515",
+        "longitude": "Bloco",
+        "description": "Os cursos de humanas são os que mais utilizam esse bloco, que também conta com uma lanchonete e três auditórios — o que garante um fluxo constante de pessoas. Além disso, os ipês-brancos que existem na sua entrada não passam despercebidos quando estão floridos.",
+        "images": [
+            "5OA/Captura de tela 2025-05-28 203944.png",
+            "5OA/Captura de tela 2025-05-28 204415.png",
+            "5OA/colagens_mapaufu (2).png"
+        ],
+        "id": "5OA"
+    },
+    {
+        "name": "50B",
+        "evaluation": "",
+        "category": "-18.917009178245877",
+        "latitude": "-48.25681269160684",
+        "longitude": "Bloco",
+        "description": "O 5OB é o bloco onde ficam os cursos de Arquitetura e Urbanismo e de Design. Ele é bem diferente dos outros, já que as salas têm pranchetas no lugar das mesas normais, e é super comum ver os trabalhos dos alunos expostos pelos corredores, o que dá um ar bem mais pessoal ao lugar. Além disso, o bloco é conhecido pelo espaço aberto nos pilotis, que é um ótimo espaço pra relaxar, e pela famosa “rampa sem fim” (que agora tem uma escada também!).",
+        "images": [
+            "5OB/Captura de tela 2025-05-28 153127.png",
+            "5OB/colagens_mapaufu (3).png",
+            "5OB/Imagem do WhatsApp de 2025-05-28 à(s) 15.15.48_be4e304f3.jpg",
+            "5OB/Imagem do WhatsApp de 2025-05-28 à(s) 18.38.14_b506feac.jpg"
+        ],
+        "id": "50B"
+    },
+    {
+        "name": "Art Mineira",
+        "evaluation": "",
+        "category": "Alimentação",
+        "latitude": "-18.91965234117612",
+        "longitude": "-48.25092812403199",
+        "description": "Restaurante caseiro e mineiro, há opção de self service e marmita.\nPreço convidativo, comida simples mas gostosa",
+        "images": [
+            "ARTE_MINEIRA/unnamed (3).webp",
+            "ARTE_MINEIRA/unnamed (5).webp",
+            "ARTE_MINEIRA/unnamed (6).webp"
+        ],
+        "id": "Art Mineira"
+    },
+    {
+        "name": "",
+        "evaluation": "",
+        "category": "",
+        "latitude": "",
+        "longitude": "",
+        "description": "",
+        "images": [
+            "CENTRO_ESPORTIVO/CE.jpg",
+            "CENTRO_ESPORTIVO/CE_02.jpg",
+            "CENTRO_ESPORTIVO/CE_03.jpg",
+            "CENTRO_ESPORTIVO/CE_04.jpg"
+        ],
+        "id": "CENTRO_ESPORTIVO"
+    },
+    {
+        "name": "Constru EJ",
+        "evaluation": "",
+        "category": "Empressa Junior",
+        "latitude": "-18.91839188042222",
+        "longitude": "-48.25494626368669",
+        "description": "Localizada no bloco 3E, a Constru Empresa Júnior da Engenharia Civil é uma organização constituída e gerida por alunos do curso de Engenharia Civil e Arquitetura e Urbanismo da Universidade Federal de Uberlândia. A empresa iniciou suas atividades em fevereiro de 2013 e têm como principal objetivo formar engenheiros de excelência, proporcionando aos membros uma melhor capacitação no desenvolvimento e na execução de projetos de engenharia civil e arquitetura. Atrelando o conhecimento teórico ao mercado de trabalho e suas exigências. Para isso, prezamos pela qualidade dos nossos serviços, visando sempre a satisfação dos nossos clientes. Preparando profissionais para o futuro.\n\nhttps://construej.com.br/sobre/\nhttps://www.instagram.com/construej?igsh=MTVhMHE3andrMzU1dw%3D%3D",
+        "images": [
+            "CONSTRU/download (1).jpg",
+            "CONSTRU/download.jpg",
+            "CONSTRU/unnamed.webp",
+            "CONSTRU/WhatsApp Image 2025-06-02 at 10.45.56 PM.jpeg"
+        ],
+        "id": "Constru EJ"
+    },
+    {
+        "name": "Coordenação",
+        "evaluation": "",
+        "category": "Administrativo",
+        "latitude": "-18.918332840114857",
+        "longitude": "-48.25537496140839",
+        "description": "Localizada no segundo andar do bloco 1I, a coordenação do curso de arquitetura e urbanismo da Faued (Faculdade de arquitetura e urbanismo e design) da UFU, é o setor responsável pela atividades administrativas e burucraticas relacionadas ao curso. Formada pela atual coordenadora: Professora Rita Saramago e secretário: Marco Aurélio. A coordenação desempenha um papel crucial na gestão e desenvolvimento do curso, atuando como um elo entre alunos, professores, corpo administrativo e a comunidade acadêmica. Suas responsabilidades envolvem tanto aspectos pedagógicos quanto administrativos e de gestão. Contatos para comunicação, email:cocau@ufu.br , telefone: +55 34 3239-4213 R:4213\n\nhttps://faued.ufu.br/graduacao/arquitetura-e-urbanismo\nhttps://faued.ufu.br/contato",
+        "images": [
+            "COORDENACAO/DSC00675.JPG",
+            "COORDENACAO/DSC00692.JPG",
+            "COORDENACAO/DSC00698.JPG",
+            "COORDENACAO/logo_arquitetura_urbanismo_0.png"
+        ],
+        "id": "Coordenação"
+    },
+    {
+        "name": "CopyTem Copiadora",
+        "evaluation": "4,5",
+        "category": "-18.914995494138022",
+        "latitude": "-48.25903296327322",
+        "longitude": "Gráfica",
+        "description": "Tem uma qualidade muito boa das impressões - inclusive pra plotagem de projetos -, bom atendimento e oferecem outros serviços gráficos. Seus preços são um pouco mais caros mas em muitos casos  vale a pena.\n\n\n\n\nhttps://www.instagram.com/copytem/",
+        "images": [
+            "COPYTEM/Captura de tela 2025-05-29 220100.png",
+            "COPYTEM/colagens_mapaufu (6).png"
+        ],
+        "id": "CopyTem Copiadora"
+    },
+    {
+        "name": "Dalau",
+        "evaluation": "",
+        "category": "-18.91842725567476",
+        "latitude": "-48.25543836070256",
+        "longitude": "Diretório Academico",
+        "description": "O Diretório Academico Livre de Arquitetura e Urbanismo (dalau), cuja atual gestão é da chapa cobogó, é uma entidade estudantil que representa os interesses dos alunos do curso de Arquitetura e Urbanismo da UFU. Ele atua como um elo entre os estudantes e a administração da universidade, defendendo seus direitos e promovendo a interação entre os alunos. Email para contato: dalauufu@gmail.com\n\nhttps://www.instagram.com/dalauufu/\nhttps://linktr.ee/dalauufu?fbclid=PAZXh0bgNhZW0CMTEAAaeBmHXrgsVC9CZxWdHjLiCad358Fnrf8nDqKDSx_sDGgXNAVLL948s8nQAy1g_aem_IjP-m36gTkmaC3Urd1aecw",
+        "images": [
+            "DALAU/DSC00673.JPG",
+            "DALAU/DSC00674.JPG",
+            "DALAU/WhatsApp Image 2025-02-24 at 6.37.11 PM.jpeg"
+        ],
+        "id": "Dalau"
+    },
+    {
+        "name": "D'Ville Supermercados",
+        "evaluation": "4",
+        "category": "Alimentação",
+        "latitude": "-18.920466508586536",
+        "longitude": "-48.265007422113165",
+        "description": "Supermercado próximo à UFU, completo, com bastante variedade como frutas e legumes, sushi e outros produtos.\nO preço é mais salgado do que outros supermercados que são atacadistas, mas possui boas promoções, principalmente de bebidas.",
+        "images": [
+            "DVILLE_SANTA_MARIA/unnamed (1).webp",
+            "DVILLE_SANTA_MARIA/unnamed (2).webp"
+        ],
+        "id": "D'Ville Supermercados"
+    },
+    {
+        "name": "D'Ville Supermercados",
+        "evaluation": "4",
+        "category": "Alimentação",
+        "latitude": "-18.91975792663196",
+        "longitude": "-48.2546218673747",
+        "description": "Supermercado bem próximo à UFU, completo, com bastante variedade como frutas e legumes, sushi e outros produtos.\nO preço é mais salgado do que outros supermercados que são atacadistas, mas possui boas promoções, principalmente de bebidas.",
+        "images": [
+            "DVILLE_SANTA_MONICA/unnamed (4).webp",
+            "DVILLE_SANTA_MONICA/unnamed.webp"
+        ],
+        "id": "D'Ville Supermercados"
+    },
+    {
+        "name": "EMAU",
+        "evaluation": "",
+        "category": "Atividade de Extensão",
+        "latitude": "-18.918442582468593",
+        "longitude": "-48.25543634620161",
+        "description": "O EMAU Buriti (escritório modelo de arquitetura e urbanismo) da UFU (Universidade Federal de Uberlândia) criado em 2018 como fruto de mobilizações estudantis e do desejo de fortalecer a extensão universitária dentro da FAUeD. Desde então, atua como espaço de formação prática, crítica e coletiva. Nosso foco está em promover a vivência prática da Arquitetura e do Urbanismo por meio de projetos extensionistas que conectam a formação acadêmica com demandas reais. Atuamos junto a comunidades, instituições e coletivos, sempre buscando uma prática sensível, colaborativa e comprometida com o impacto social\n\nhttps://www.instagram.com/emauburiti/",
+        "images": [
+            "EMAU_BURITI/2.0.png",
+            "EMAU_BURITI/4.png",
+            "EMAU_BURITI/DSC00695.JPG",
+            "EMAU_BURITI/Versão Branca Com Moldura_page-0001.jpg"
+        ],
+        "id": "EMAU"
+    },
+    {
+        "name": "Flex Bar",
+        "evaluation": "4",
+        "category": "Alimentação",
+        "latitude": "-18.91716046871193",
+        "longitude": "-48.25301422953028",
+        "description": "Um antigo posto de gasolina que agora é bar e durante os almoços de segunda à sexta tem PF (prato feito) no almoço.\nO preço é muito bom e a comida é gostosa\nhttps://www.instagram.com/oflexbar/",
+        "images": [
+            "FLEX/Captura de tela 2025-06-04 174955.png",
+            "FLEX/Captura de tela 2025-06-04 175143.png"
+        ],
+        "id": "Flex Bar"
+    },
+    {
+        "name": "Ideal Copiadora e Papelaria",
+        "evaluation": "4",
+        "category": "-18.916659784254445",
+        "latitude": "-48.254954532224055",
+        "longitude": "Gráfica e papelaria",
+        "description": "Fica bem em frente a entrada da Segismundo, então é muito útil, além de que vendem também bastantes materiais de papelaria que são úteis no dia a dia. A qualidade das impressões as vezes deixa a desejar (principalmente em plotagem de pranchas), já o preço é bem justo, mas não tem um padrão, cobram valores diferentes para serviços iguais e não existe uma explicação\n\n\nNão fazem impressão antes de você chegar, e se estiver demorando ou dando problema pra imprimir, desiste e vai pra outro lugar, confia.\nhttps://www.instagram.com/ideal_copiadora2/",
+        "images": [
+            "IDEAL_COPIADORA/Captura de tela 2025-05-29 222731.png",
+            "IDEAL_COPIADORA/colagens_mapaufu (7).png"
+        ],
+        "id": "Ideal Copiadora e Papelaria"
+    },
+    {
+        "name": "Informa 3D",
+        "evaluation": "",
+        "category": "Laboratório",
+        "latitude": "-18.918180600815173",
+        "longitude": "-48.25539641907868",
+        "description": "O Laboratório de Modelagem Baseada em Informação (informa 3d), localizado no térreo do bloco 1I, na sala 105, é um espaço da Faculdade de Arquitetura, Urbanismo e Design da Universidade Federal de Uberlândia. Fundado em 2017, substituiu os 55 m² do antigo Laboratório de Computação Gráfica, com uma equipe explora tecnologias de computação, lógica, matemática e inteligência artificial para gerar inovação em Modelagem de Informação da Construção e Simulações Computacionais. Coordenador: André Luis de Araujo. Email para contato: informa3d@gmail.com\n\nhttps://www.informa3d.xyz/\nhttps://www.instagram.com/informa3d/",
+        "images": [
+            "INFORMA_3D/DSC00717.JPG",
+            "INFORMA_3D/DSC00719.JPG",
+            "INFORMA_3D/wallpaper_informa3d.png",
+            "INFORMA_3D/whatsapp_image_2019-11-07_at_16.39.46.jpeg"
+        ],
+        "id": "Informa 3D"
+    },
+    {
+        "name": "Kalunga",
+        "evaluation": "5",
+        "category": "-18.910065772548307",
+        "latitude": "-48.261250642267576",
+        "longitude": "Papelaria",
+        "description": "Você vai encontrar tudo que precisa, é o lugar mais próximo da UFU com variedade de material escolar, mas por ser loja de rede pode ter um preço pouco mais caro. Se você faz arquitetura, vai ser um dos seus lugares mais frequentados e que mais vai gastar dinheiro - pov reclamo mas não vivo sem\n\n\nQuase mais vergonhoso que andar com papel paraná no shopping é andar com ele na UFU",
+        "images": [
+            "KALUNGA/Captura de tela 2025-05-29 225050.png",
+            "KALUNGA/colagens_mapaufu (8).png"
+        ],
+        "id": "Kalunga"
+    },
+    {
+        "name": "Labtac",
+        "evaluation": "",
+        "category": "-18.918282093697037",
+        "latitude": "-48.25536423257325",
+        "longitude": "O Laboratório de Tecnologia do Ambiente Construído (Labtac), localizado no térreo do bloco 1I, na sala 103. O laboratório têm por finalidade congregar professores, estudantes, técnicos, pesquisadores e outros profissionais que se interessem e/ou desenvolvam atividades de estudo, pesquisa e extensão relacionadas com as seguintes linhas de pesquisa:Desempenho do ambiente construído;Industrialização e inovações tecnológicas; Processos e técnicas construtivas; Desenvolvimento de componentes e protótipos. Possuindo diversos equipamentos e utensílios voltados a área da construção civil, junto de muitos modelos e protótipos estruturais. Coordenadora do laboratório: Albenise Laverde.",
+        "description": "https://faued.ufu.br/unidades/laboratorio/laboratorio-de-tecnologia-do-ambiente-construido",
+        "images": [
+            "LABTAC/DSC00687.JPG",
+            "LABTAC/DSC00690.JPG",
+            "LABTAC/DSC00691.JPG",
+            "LABTAC/imagem_destaque_enviar01.jpg"
+        ],
+        "id": "Labtac"
+    },
+    {
+        "name": "Lapex",
+        "evaluation": "",
+        "category": "Laboratório",
+        "latitude": "-18.918269516527822",
+        "longitude": "-48.25691212213997",
+        "description": "O Lapex (laboratorio de Projetos de Arquitetura e Urbanismo e Desing. As atividades desenvolvidas no Laboratório resultam em projetos (de arquitetura, urbanismo ou design), artigos científicos, dossiês e planos. Infraestrutura o Laboratório disponibiliza computadores, impressora, materiais para elaboração de projetos e modelos reduzidos, além de espaço adequado para que professores e alunos possam desenvolver suas atividades e/ou promover reuniões com as equipes de trabalho envolvidas. O LAPEx conta ainda com dois servidores técnico-administrativos com formação em Arquitetura e Urbanismo para auxiliar no desenvolvimento dos projetos e orientação dos estagiários. Horário de atendimento: De Segunda a Sexta das 08:00 às 12:00 e das 13:00 às 18:00. Telefone: +55 34 3239-4502 Coordenador(a): Adalberto José Vilela JúniorTécnico(a) responsável: Adoniran Tristão Técnico(a) responsável: Rossana Batista Ferreira Lima.\n\nhttps://faued.ufu.br/unidades/laboratorio/laboratorio-de-projetos-de-arquitetura-e-urbanismo-e-design\nhttps://www.instagram.com/lapex.faued/",
+        "images": [
+            "LAPEX/DSC00699.JPG",
+            "LAPEX/img-20180918-wa0018.jpeg",
+            "LAPEX/logo_lpaud.jpg",
+            "LAPEX/whatsapp_image_2019-11-06_at_10.09.21.jpeg"
+        ],
+        "id": "Lapex"
+    },
+    {
+        "name": "La Biblioteca",
+        "evaluation": "3,5",
+        "category": "Alimentação",
+        "latitude": "-18.915872160780964",
+        "longitude": "-48.258037716629104",
+        "description": "Bar próximo a UFU, que serve também almoço atualmente das 11h30 às 14h30 todos os dias.\nHá opção de self-service e alguns tipos de marmitas. Há uma boa variedade de comidas.\nPara saber como funciona como bar, confira a seção \"bares\" no mapa.\nhttps://www.instagram.com/labibliotecaudi/",
+        "images": [
+            "LA_BIBLIO/Captura de tela 2025-05-31 173537.png"
+        ],
+        "id": "La Biblioteca"
+    },
+    {
+        "name": "LCC",
+        "evaluation": "",
+        "category": "Laboratório",
+        "latitude": "-18.918200899396478",
+        "longitude": "-48.25540714791382",
+        "description": "O laboratorio de Conforto Ambietal e Conservação de Energeia (LCC) localizado no térreo do bloco 1I, na sala 103 o laboratório têm por finalidade congregar professores, estudantes, técnicos, pesquisadores e outros profissionais que se interessem e/ou desenvolvam atividades de estudo, pesquisa e extensão relacionadas com as seguintes linhas de pesquisa:Banco de dados climáticos de Uberlândia; Parâmetros de conforto térmico, lumínico e acústico para Uberlândia; Qualidade do ar no ambiente construído; Eficiência energética de sistemas construtivos; Normalização brasileira, certificação e desempenho ambiental; Avaliação do desempenho térmico e energético de edificações; Integração de métodos e ferramentas de simulação computacional à atividade projetual; Sustentabilidade; Materiais de baixo impacto ambiental; D Horário de atendimento segundas às sextas-feiras, das 8h00 às 12h00 e das 13h30 às 17h30. Técnico(a) responsável: Aline Ribeiro Souza.\n\nhttps://faued.ufu.br/unidades/laboratorio/laboratorio-de-conforto-ambiental-e-conservacao-de-energia",
+        "images": [
+            "LCC/DSC00687.JPG",
+            "LCC/DSC00688.JPG",
+            "LCC/DSC00689.JPG",
+            "LCC/DSC00690.JPG",
+            "LCC/DSC00691.JPG"
+        ],
+        "id": "LCC"
+    },
+    {
+        "name": "LED",
+        "evaluation": "",
+        "category": "Laboratório",
+        "latitude": "-18.918322690832518",
+        "longitude": "-48.255417876748965",
+        "description": "O laboratorio de expressão digital (LED), localizado no terreo do bloco 1I onde são exploradas diversas abordagens sobre tecnologia digital e processos criativos. No LED são desenvolvidas atividades como:Criação/análise de artes gráficas e digitais. Impressão 3D.Desenvolvimento de aplicações web. Disponibilidade de notebooks pertencentes ao laboratório aos discentes. Disponibilidade de espaço para realização de atividades disciplinares. Visando complementar os serviços prestados pelo Centro de Tecnologia da Informação e Comunicação – CTIC/UFU, o LED realiza ações e orientações técnicas na área de Tecnologia voltadas às coordenações dos cursos de Arquitetura e Urbanismo e Design, contemplando diversos setores, departamentos e núcleos da FAUED. Horário de Atendimento: 08:00h às 12:00h / 13:00h às 17:00h Atendimento Presencial: Segunda, quarta e sexta-feira. Coordenador(a): Gabriela Pereira Carneiro Técnico(a) responsável: Francisco Castro. Endereço de contato, Telefones: 34 3239-4509 / 34 99983-8158 Email: francisco.castro@ufu.br\n\nhttps://faued.ufu.br/unidades/laboratorio/laboratorio-de-expressao-digital\nhttps://www.instagram.com/led.faued/",
+        "images": [
+            "LED/DSC00694.JPG",
+            "LED/DSC00713.JPG",
+            "LED/DSC00714.JPG",
+            "LED/DSC00716.JPG"
+        ],
+        "id": "LED"
+    },
+    {
+        "name": "LOL 3Q",
+        "evaluation": "4",
+        "category": "Alimentação",
+        "latitude": "-18.91753647162982",
+        "longitude": "-48.25744566488863",
+        "description": "É uma boa lanchonete com diversas opções de salgados, milkshakes, cafés, etc.\nFica no espaço de convivência do bloco 3Q, com algumas mesas, ótimo para ficar conversando com os amigos e comendo.\nFica a dica: pão de queijo com nutella, pão de queijo com patê de frango e qualquer milkshake.",
+        "images": [
+            "LOL_3Q/Captura de tela 2025-05-31 172202.png",
+            "LOL_3Q/Imagem do WhatsApp de 2025-06-03 à(s) 18.10.34_83944d04.jpg",
+            "LOL_3Q/Imagem do WhatsApp de 2025-06-03 à(s) 18.10.47_79941ebc.jpg"
+        ],
+        "id": "LOL 3Q"
+    },
+    {
+        "name": "LOL CC",
+        "evaluation": "4",
+        "category": "Alimentação",
+        "latitude": "-18.91869850037935",
+        "longitude": "-48.257405084803715",
+        "description": "Lanchonete LOL localizada no Centro de Convivência (CC) do campus.\nOpções variadas de salgados, cafés como as outras.\nPor ficar localizado no CC é um ótimo ambiente para sentar, comer e descontrair com os amigos.\nFica a dica: nesse LOL tem casquinha de sorvete, geralmente tem algum brechó ou feirinha acontecendo por perto, é uma opção legal para ficar depois de um almoço no RU e pegar um docinho :)",
+        "images": [
+            "LOL_CC/Captura de tela 2025-05-31 180729.png",
+            "LOL_CC/Captura de tela 2025-05-31 181520.png"
+        ],
+        "id": "LOL CC"
+    },
+    {
+        "name": "LOL Restaurante",
+        "evaluation": "4",
+        "category": "Alimentação",
+        "latitude": "-18.91924314473215",
+        "longitude": "-48.25947306925216",
+        "description": "O maior LOL do campus Santa Mônica, com mais variedades de comida. Funciona como lanchonete, assim como os outros, e têm self-service no almoço.\nO ponto de alimentação com mais variedade.\nFica a dica: apesar de ser considerado longe do bloco da Arquitetura é bem frequentado, o almoço apesar do preço um pouco mais salgado é gostoso, único LOL que tem casquinha de açaí, geralmente é a opção quando a comida do RU não está muito apetitosa.",
+        "images": [
+            "LOL_RESTAURANTE/IMG_20211115_175638.webp",
+            "LOL_RESTAURANTE/unnamed (1).webp",
+            "LOL_RESTAURANTE/unnamed (2).webp",
+            "LOL_RESTAURANTE/unnamed.webp"
+        ],
+        "id": "LOL Restaurante"
+    },
+    {
+        "name": "Master Cópias",
+        "evaluation": "4",
+        "category": "-18.917439960824545",
+        "latitude": "-48.25746757680969",
+        "longitude": "Gráfica e papelaria",
+        "description": "Essa gráfica fica dentro do bloco 3Q, então ela salva muito quando precisa de algo e já está dentro da UFU, nela também vendem alguns itens básicos de papelarias, que sempre precisamos na faculdade. Pode ter um preço mais alto em alguns serviços e uma fila dependendo do horário, acaba perdendo alguns pontos, mas pela facilidade compensa.\n\n\nEnvia o arquivo que quer imprimir um pouquinho antes de chegar, assim não precisa abrir seu WhatsApp lá",
+        "images": [
+            "MASTER_COPIAS/colagens_mapaufu (10).png",
+            "MASTER_COPIAS/Imagem do WhatsApp de 2025-06-03 à(s) 18.11.08_355a95a8.jpg"
+        ],
+        "id": "Master Cópias"
+    },
+    {
+        "name": "NEURB",
+        "evaluation": "",
+        "category": "Núcleo",
+        "latitude": "-18.9184123203165",
+        "longitude": "-48.25541806156479",
+        "description": "O Núcleo de Estudos Urbanos (neurb), localizado no segundo andar do bloco 1i o núcleo tem por finalidade congregar professores, estudantes, técnicos, profissionais (entre outros) que se interessem e/ou tenham atividades de estudo, pesquisa e extensão relacionadas com a Arquitetura e Urbanismo, mais especificamente nos seguintes temas de pesquisa: Teoria do Urbanismo; Planejamento Urbano e Regional; Tecnologia em análise urbana; História da cidade e do urbanismo; Desenho urbano; Projeto urbanístico; Projeto paisagístico; Paisagem e espaços livres urbanos; Comércio e cidade; Morfologia urbana. Técnico(a) participante: Julio Cesar Lavrador Andreo. Informações de contatoTelefones: 34 3230-9423 / 34 98801-9481 Email: neurb@faued.ufu.br, Horário de Atendimento: 08:00h às 12:00h / 13:00h às 17:00h, Atendimento Presencial: Segunda e quinta-feira",
+        "images": [
+            "NEURB/DSC00676.JPG",
+            "NEURB/DSC00677.JPG",
+            "NEURB/DSC00678.JPG",
+            "NEURB/DSC00679.JPG"
+        ],
+        "id": "NEURB"
+    },
+    {
+        "name": "NUPLI",
+        "evaluation": "",
+        "category": "-18.918450725520742",
+        "latitude": "-48.25542933886356",
+        "longitude": "O Núcleo de Pesquisa em Linguagem (nupli), localizado no segundo andar do bloco 1i, é o núcleo de pesquisa que compreende as disciplinas da área de linguagem e representação: Plástica, Desenho Geométrico, Desenho Arquitetônico, Construções Plásticas, Plástica Digital, Análise da Forma. Tem por finalidade reunir profissionais, estudantes, professores, produtores, técnicos, entre outros, que se interessem e/ou tenham atividades de estudo, pesquisa e extensão relacionadas com a Arquitetura, Urbanismo e Design, mais especificamente nas seguintes linhas de pesquisa: Desenho, representação e análise da forma; Arte, Arquitetura e Cultura Urbana; e Multimeios",
+        "description": "",
+        "images": [
+            "NUPLI/DSC00709.JPG",
+            "NUPLI/DSC00710.JPG",
+            "NUPLI/DSC00711.JPG",
+            "NUPLI/DSC00712.JPG"
+        ],
+        "id": "NUPLI"
+    },
+    {
+        "name": "Nuppa",
+        "evaluation": "",
+        "category": "-18.91842298842967",
+        "latitude": "-48.25540903972578",
+        "longitude": "Núcleo",
+        "description": "O Núcleo de Pesquisa em Projeto de Arquitetura (nuppa), localizado no segundo andar do bloco 1i tem por finalidade congregar professores, estudantes, técnicos, profissionais que se interessem e/ou tenham atividades de estudo, pesquisa e extensão relacionadas com o Projeto de Arquitetura, mais especificamente nas seguintes linhas de pesquisa: Projeto de Arquitetura; Processo e Gestão de Projeto; Metodologia de Projeto; Tecnologia do Ambiente Construído; Qualidade e Desempenho do Ambiente Construído.",
+        "images": [
+            "NUPPA/DSC00680.JPG",
+            "NUPPA/DSC00681.JPG",
+            "NUPPA/DSC00682.JPG",
+            "NUPPA/DSC00698.JPG"
+        ],
+        "id": "Nuppa"
+    },
+    {
+        "name": "NUTHAU",
+        "evaluation": "",
+        "category": "-18.918395251334005",
+        "latitude": "-48.255436105242815",
+        "longitude": "O Núcleo de Teoria e História de Arquitetura e Urbanismo (nuthau), localizado no segundo andar do bloco 1i, O NUTHAU tem por finalidade congregar professores, pesquisadores, estudantes de graduação e pós-graduação, profissionais, técnicos que se interessem e/ou tenham atividades de estudo, pesquisa, ensino e extensão relacionadas com a Teoria e a História da Arquitetura e do Urbanismo, mais especificamente nas seguintes linhas de pesquisa: Historia da Arquitetura e Urbanismo Moderno no Brasil e América Latina; História da Arquitetura e do Urbanismo nas regiões do Triângulo Mineiro e Alto Paranaíba; Arte e arquitetura moderna; Arte, Cidade e Arquitetura contemporâneas [pós-Brasília]; Interdisciplinaridades e Transversalidades em linguagens a partir da Arquitetura e da Cidade Modernas;",
+        "description": "Documentação, História e Preservação do Patrimônio Arquitetônico, Urbanístico e Paisagístico no Brasil e América Latina.\n\nhttps://nuthau.notion.site/78ea7e208d5048ac9d61af84fd1a07f4?v=d5223d1062734ec49d6708e2d4ac2ec2\nhttps://www.instagram.com/nuthauufu/",
+        "images": [
+            "NUTHAU/DSC00683.JPG",
+            "NUTHAU/DSC00684.JPG",
+            "NUTHAU/DSC00685.JPG",
+            "NUTHAU/DSC00698.JPG"
+        ],
+        "id": "NUTHAU"
+    },
+    {
+        "name": "Papelaria Santa Mônica",
+        "evaluation": "3,5",
+        "category": "-18.914333346313022",
+        "latitude": "-48.25758655207063",
+        "longitude": "Papelaria",
+        "description": "Fica próxima da UFU e tem uma boa variedade de produtos de papelaria. Entretanto, o preço é bem salgado e o atendimento também deixa um pouco a desejar.",
+        "images": [
+            "PAPELARIA_SANTA_MONICA/colagens_mapaufu (9).png"
+        ],
+        "id": "Papelaria Santa Mônica"
+    },
+    {
+        "name": "",
+        "evaluation": "",
+        "category": "",
+        "latitude": "",
+        "longitude": "",
+        "description": "",
+        "images": [],
+        "id": "PIZZADA"
+    },
+    {
+        "name": "Reitoria",
+        "evaluation": "",
+        "category": "Administrativo",
+        "latitude": "-18.920220450760727",
+        "longitude": "-48.26132882490891",
+        "description": "A Reitoria é o órgão executivo central que administra, coordena, fiscaliza e superintende as atividades da UFU. É exercida pelo Reitor, auxiliado pelo Vice-reitor, acompanhada diretamente pelas Pró-reitorias, Órgãos Administrativos, Assessorias Especiais, Órgãos Suplementares e Unidades Especiais de Ensino. Horário de Atendimento\nSegunda à sexta-feira das 07:30 às 11:30 e 13:30 às 17:30 horas. Reitor: Carlos Henrique de Carvalho. Período de Gestão: 2025 a 2028 Secretaria: Alda Regina Silva Oliveira. E-mail: reitoria@ufu.br Telefone: 34 3239-4805.\n\nhttps://ufu.br/reitoria",
+        "images": [
+            "REITORIA/imagem_chamada_imagem_destaque_imagem_destaque_imagem_destaque_62495428_840656346303584_7602381483046600704_n_foto_arquivo_proae.jpg.jpg",
+            "REITORIA/imagem_destaque_dji_0159_1.jpg",
+            "REITORIA/imagem_destaque_imagem_destaque_reitoria-_2.jpg",
+            "REITORIA/semana do servidor ufu.jpeg.jpg"
+        ],
+        "id": "Reitoria"
+    },
+    {
+        "name": "",
+        "evaluation": "",
+        "category": "",
+        "latitude": "",
+        "longitude": "",
+        "description": "",
+        "images": [
+            "SARRAU/SARRAU_01.jpg",
+            "SARRAU/SARRAU_02.jpg"
+        ],
+        "id": "SARRAU"
+    },
+    {
+        "name": "Tenda do café",
+        "evaluation": "3",
+        "category": "Alimentação",
+        "latitude": "-18.917134749599168",
+        "longitude": "-48.25676837534271",
+        "description": "Lanchonete localizada no bloco 5O (a mais próxima do bloco 5O-B), ideal para lanches rápidos, há opções de salgados, doces, cafés, etc.\nHá mesas para consumo dos alimentos.\nFica a dica: não é a lanchonete favorita da maioria dos alunos; apesar da proximidade com o bloco onde ocorrem as aulas, o LOL do 3Q é geralmente escolhido. Apesar disso, há alguns benefícios, por exemplo as atendentes esquentam marmita no micro-ondas se solicitado.",
+        "images": [
+            "TENDA_DO_CAFE/Captura de tela 2025-05-31 172537.png"
+        ],
+        "id": "Tenda do café"
+    },
+    {
+        "name": "Ágile Gráfica e Comunicação Visual",
+        "evaluation": "4,5",
+        "category": "-18.91461279279913",
+        "latitude": "-48.255460761345354",
+        "longitude": "Gráfica",
+        "description": "É uma gráfica próxima da UFU que além de impressões e serviços gráficos também trabalha com comunicação visual. Tem um bom atendimento, boa qualidade, preço justo e não costuma demorar na entrega dos serviços.\n\n\n\n\nhttps://www.instagram.com/agilegrafica/",
+        "images": [
+            "ÁGILE_GRÁFICA/Captura de tela 2025-05-29 212301.png",
+            "ÁGILE_GRÁFICA/colagens_mapaufu (5).png"
+        ],
+        "id": "Ágile Gráfica e Comunicação Visual"
+    }
 ]

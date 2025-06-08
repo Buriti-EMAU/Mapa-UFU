@@ -425,6 +425,10 @@ body {
     transform: scale(1.2);
 }
 
+.mapboxgl-popup {
+    z-index: 10; /* Higher than the marker's z-index (1 or 2) */
+}
+
 /* Mobile-specific marker styles */
 @media (max-width: 768px) {
     .marker {

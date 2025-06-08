@@ -1,0 +1,44 @@
+[
+  {
+    "id": "biblioteca",
+    "name": "Biblioteca Central",
+    "latitude": -18.918854,
+    "longitude": -48.257977,
+    "category": "Acadêmico",
+    "description": "A Biblioteca Central Santa Mônica oferece um amplo acervo de livros, periódicos e recursos digitais para a comunidade acadêmica. Possui espaços para estudo individual e em grupo.",
+    "evaluation": 4.5,
+    "images": [
+      "data/places/biblioteca/Image_01.jpg",
+      "data/places/biblioteca/Image_02.jpg",
+      "data/places/biblioteca/Image_03.jpg"
+    ]
+  },
+  {
+    "id": "restaurante_universitario",
+    "name": "Restaurante Universitário",
+    "latitude": -18.919523,
+    "longitude": -48.259822,
+    "category": "Alimentação",
+    "description": "O Restaurante Universitário (RU) oferece refeições a preços acessíveis para estudantes e servidores. Serve café da manhã, almoço e jantar em dias úteis.",
+    "evaluation": 4.2,
+    "images": [
+      "data/places/restaurante_universitario/Image_01.jpg",
+      "data/places/restaurante_universitario/Image_02.jpg",
+      "data/places/restaurante_universitario/Image_03.jpg"
+    ]
+  },
+  {
+    "id": "bloco_1a",
+    "name": "Bloco 1A",
+    "latitude": -18.917654,
+    "longitude": -48.258123,
+    "category": "Acadêmico",
+    "description": "O Bloco 1A abriga salas de aula, laboratórios e gabinetes de professores da Faculdade de Engenharia Elétrica. Possui estrutura moderna para atividades de ensino e pesquisa.",
+    "evaluation": 4.0,
+    "images": [
+      "data/places/bloco_1a/Image_01.jpg",
+      "data/places/bloco_1a/Image_02.jpg",
+      "data/places/bloco_1a/Image_03.jpg"
+    ]
+  }
+]
