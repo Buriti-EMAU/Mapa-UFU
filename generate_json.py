@@ -37,9 +37,9 @@ def generate_json(root_dir="data/places"):
                             print(location_data["name"])
                             location_data["id"] = location_data["name"] if location_data["name"] else location_dir # Fallback id to dir name
                             location_data["evaluation"] = lines[1].strip() if len(lines) > 1 else ""
-                            location_data["category"] = lines[2].strip() if len(lines) > 2 else ""
-                            location_data["latitude"] = lines[3].strip() if len(lines) > 2 else ""
-                            location_data["longitude"] = lines[4].strip() if len(lines) > 3 else ""
+                            location_data["latitude"] = lines[2].strip() if len(lines) > 2 else ""
+                            location_data["longitude"] = lines[3].strip() if len(lines) > 3 else ""
+                            location_data["category"] = lines[4].strip() if len(lines) > 2 else ""
                             location_data["description"] = "\n".join(line.strip() for line in lines[5:]).strip() if len(lines) > 5 else ""
                     except Exception as e:
                         print(f"Error reading {text_file_path}: {e}")

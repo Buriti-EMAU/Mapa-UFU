@@ -7,8 +7,8 @@ if (typeof MAPBOX_ACCESS_TOKEN === 'undefined') {
 
 // Define os limites de Uberlândia para restringir a visualização do mapa
 const UBERLANDIA_BOUNDS = [
-    [-48.35, -19.05], // Coordenadas Sudoeste [lng, lat]
-    [-48.15, -18.85]  // Coordenadas Nordeste [lng, lat]
+    [-48.30, -19.00], // Coordenadas Sudoeste [lng, lat]
+    [-48.10, -18.80]  // Coordenadas Nordeste [lng, lat]
 ];
 
 // Detecção simples de dispositivo móvel baseada apenas na largura da tela
@@ -40,7 +40,7 @@ const map = new mapboxgl.Map({
     bearing: isMobile ? 0 : -17.6, // Sem rotação inicial em dispositivos móveis
     antialias: true, // Habilita antialiasing para linhas mais suaves
     maxBounds: UBERLANDIA_BOUNDS, // Limita a visualização do mapa a Uberlândia
-    minZoom: 13, // Nível mínimo de zoom
+    minZoom: 14, // Nível mínimo de zoom
     maxZoom: 20, // Nível máximo de zoom
     attributionControl: false, // Adicionaremos isso manualmente em uma posição melhor para dispositivos móveis
     renderWorldCopies: false, // Impede a renderização de múltiplas cópias do mundo
@@ -51,20 +51,21 @@ const map = new mapboxgl.Map({
 
 // Cores das categorias
 const categoryColors = {
-    'Acadêmico': '#4285F4',
+    'Laboratório': '#4285F4',
     'Alimentação': '#EA4335',
     'Administrativo': '#34A853', // Kept for consistency if you add such places
     'Lazer': '#FBBC05',         // Kept for consistency
     'Serviços': '#9C27B0',      // Kept for consistency
     'Bloco': '#00BFA5',         // New color for "Bloco"
     'Papelaria': '#FFC107'      // New color for "Papelaria"
+    
 };
 
 // Armazena todos os marcadores
 let markers = [];
 let places = [];
 // Update activeFilters to include categories from your places.json by default
-let activeFilters = ['Acadêmico', 'Alimentação', 'Administrativo', 'Lazer', 'Serviços', 'Bloco', 'Papelaria'];
+let activeFilters = ['Laboratório', 'Alimentação', 'Administrativo', 'Lazer', 'Serviços', 'Bloco', 'Papelaria'];
 let currentPlaceId;
 
 const ISOCHRONE_SOURCE_ID = 'isochrone-source';
