@@ -295,6 +295,7 @@ body {
 
 .place-details.active {
     width: 400px;
+    height: auto;
 }
 
 .place-details-content {
@@ -316,7 +317,7 @@ body {
 }
 
 .place-info {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .place-info h2 {
@@ -454,6 +455,7 @@ body {
     
     .place-details.active {
         transform: translateY(0);
+        height: 100%;
     }
     
     .place-details-content {
@@ -691,7 +693,7 @@ body {
     }
     
     .main-image {
-        height: 200px;
+        height: 100%;
         border-radius: 10px;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
