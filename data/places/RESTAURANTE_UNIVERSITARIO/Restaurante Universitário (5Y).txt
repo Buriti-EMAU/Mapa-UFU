@@ -1,0 +1,10 @@
+Restaurante Universitário
+4
+-18.917925319945248
+-48.25542915840499
+Alimentação
+Localizado dentro do campus, ele oferece refeições completas e balanceadas a preços acessíveis, garantindo a segurança alimentar de estudantes, servidores e técnicos da universidade. Serve café da manhã, almoço e jantar em dias úteis. 
+
+Dica: Evitar carne moída e peixe.
+Os tíquetes podem ser adquiridos pelo aplicativo da UFU.
+

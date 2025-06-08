@@ -51,21 +51,25 @@ const map = new mapboxgl.Map({
 
 // Cores das categorias
 const categoryColors = {
-    'Laboratório': '#283aa0',
+    'Laboratórios e Núcleos': '#283aa0', // Renamed from 'Laboratório'
     'Alimentação': '#EA4335',
-    'Administrativo': '#187230', // Kept for consistency if you add such places
-    'Lazer': '#FBBC05',         // Kept for consistency
-    'Serviços': '#9C27B0',      // Kept for consistency
+    'Administrativo': '#187230',
+    'Lazer': '#FBBC05',
     'Bloco': '#00BFA5',         // New color for "Bloco"
-    'Papelaria': '#FFC107'      // New color for "Papelaria"
-    
+    'Transporte': '#009688',      // New category
+    'Gráfica e papelaria': '#FFB300', // New category
+    'Entrada': '#757575'          // New category
 };
 
 // Armazena todos os marcadores
 let markers = [];
 let places = [];
 // Update activeFilters to include categories from your places.json by default
-let activeFilters = ['Laboratório', 'Alimentação', 'Administrativo', 'Lazer', 'Serviços', 'Bloco', 'Papelaria'];
+let activeFilters = [
+    'Bloco', 'Lazer', 'Laboratórios e Núcleos', 'Administrativo',
+    'Transporte', 'Gráfica e papelaria',
+    'Entrada', 'Alimentação'
+];
 let currentPlaceId;
 
 const ISOCHRONE_SOURCE_ID = 'isochrone-source';

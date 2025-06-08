@@ -1,8 +1,8 @@
 LCC
 
-Laboratório 
 -18.918200899396478
 -48.25540714791382
-O laboratorio de Conforto Ambietal e Conservação de Energeia (LCC) localizado no térreo do bloco 1I, na sala 103 o laboratório têm por finalidade congregar professores, estudantes, técnicos, pesquisadores e outros profissionais que se interessem e/ou desenvolvam atividades de estudo, pesquisa e extensão relacionadas com as seguintes linhas de pesquisa:Banco de dados climáticos de Uberlândia; Parâmetros de conforto térmico, lumínico e acústico para Uberlândia; Qualidade do ar no ambiente construído; Eficiência energética de sistemas construtivos; Normalização brasileira, certificação e desempenho ambiental; Avaliação do desempenho térmico e energético de edificações; Integração de métodos e ferramentas de simulação computacional à atividade projetual; Sustentabilidade; Materiais de baixo impacto ambiental; D Horário de atendimento segundas às sextas-feiras, das 8h00 às 12h00 e das 13h30 às 17h30. Técnico(a) responsável: Aline Ribeiro Souza.
+Laboratórios e Núcleos 
+O laboratorio de Conforto Ambietal e Conservação de Energeia (LCC) localizado no térreo do bloco 1I, na sala 103 o laboratório têm por finalidade congregar professores, estudantes, técnicos, pesquisadores e outros profissionais que se interessem e/ou desenvolvam atividades de estudo, pesquisa e extensão relacionadas com as seguintes linhas de pesquisa:Banco de dados climáticos de Uberlândia; Parâmetros de conforto térmico, lumínico e acústico para Uberlândia; Qualidade do ar no ambiente construído; Eficiência energética de sistemas construtivos; Normalização brasileira, certificação e desempenho ambiental; Avaliação do desempenho térmico e energético de edificações; Integração de métodos e ferramentas de simulação computacional à atividade projetual; Sustentabilidade; Materiais de baixo impacto ambiental; Horário de atendimento segundas às sextas-feiras, das 8h00 às 12h00 e das 13h30 às 17h30. Técnico(a) responsável: Aline Ribeiro Souza.
 
 https://faued.ufu.br/unidades/laboratorio/laboratorio-de-conforto-ambiental-e-conservacao-de-energia
