@@ -8,11 +8,11 @@
     --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     
     /* Category colors */
-    --academic-color: #4285F4;
-    --food-color: #EA4335;
-    --administrative-color: #34A853;
-    --leisure-color: #FBBC05;
-    --services-color: #9C27B0;
+    --academic-color: #283aa0;
+    --food-color: #832b23;
+    --administrative-color: #187230;
+    --leisure-color: #333332;
+    --services-color: #701181;
 }
 
 /* Modal Styles */

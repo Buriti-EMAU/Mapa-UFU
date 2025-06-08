@@ -1,4 +1,5 @@
 import { MAPBOX_ACCESS_TOKEN } from './config.js'; 
+import { addRectangleToMap } from './bloco1i.js';
 
 if (typeof MAPBOX_ACCESS_TOKEN === 'undefined') {
     throw new Error("O Token de Acesso do Mapbox não está definido. Por favor, certifique-se de que o arquivo js/config.js foi criado, contém seu token e está incluído no seu HTML antes de main.js.");
@@ -50,9 +51,9 @@ const map = new mapboxgl.Map({
 
 // Cores das categorias
 const categoryColors = {
-    'Laboratório': '#4285F4',
+    'Laboratório': '#283aa0',
     'Alimentação': '#EA4335',
-    'Administrativo': '#34A853', // Kept for consistency if you add such places
+    'Administrativo': '#187230', // Kept for consistency if you add such places
     'Lazer': '#FBBC05',         // Kept for consistency
     'Serviços': '#9C27B0',      // Kept for consistency
     'Bloco': '#00BFA5',         // New color for "Bloco"
@@ -551,9 +552,12 @@ map.on('load', () => {
     
     // Configura interações específicas para dispositivos móveis
     setupMobileInteractions();
+
+    // Adiciona o recurso de retângulo (se necessário)
+    addRectangleToMap(map);
 });
 
-// currentPlaceId já foi declarado acima
+
 
 // Configura interações específicas para dispositivos móveis
 function setupMobileInteractions() {
