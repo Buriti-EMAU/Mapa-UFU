@@ -512,7 +512,7 @@ map.on('load', () => {
                     'commercial', '#EA4335', // Red for commercial buildings
                     'residential', '#FBBC05', // Yellow for residential buildings
                     'government', '#34A853', // Green for government buildings
-                    '#a13025' // Roxo para outros edifícios
+                    '#a13025'
                 ],
                 'fill-extrusion-height': [
                     'interpolate', ['linear'], ['zoom'],
