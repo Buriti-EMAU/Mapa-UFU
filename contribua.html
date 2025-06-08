@@ -89,6 +89,24 @@
         .submit-btn:hover {
             background-color: #004494;
         }
+
+        .google-form-btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            margin: 2rem 0;
+            transition: background-color 0.3s;
+            border: none; /* Ensure it looks like a button */
+            cursor: pointer; /* Make it look clickable */
+        }
+        .google-form-btn:hover {
+            background-color: #004494; /* Darker shade on hover */
+        }
     </style>
 </head>
 <body>
@@ -123,61 +141,10 @@
         
         <p>Para contribuir, preencha o formulário abaixo com suas informações e sugestões. Nossa equipe irá analisar e, se aprovado, sua contribuição será adicionada ao mapa.</p>
         
-        <div class="contribution-form">
-            <form id="contribute-form">
-                <div class="form-group">
-                    <label for="name">Seu Nome</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">Seu E-mail</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="place-name">Nome do Local</label>
-                    <input type="text" id="place-name" name="place-name" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="category">Categoria</label>
-                    <select id="category" name="category" required>
-                        <option value="">Selecione uma categoria</option>
-                        <option value="Acadêmico">Acadêmico</option>
-                        <option value="Alimentação">Alimentação</option>
-                        <option value="Administrativo">Administrativo</option>
-                        <option value="Lazer">Lazer</option>
-                        <option value="Serviços">Serviços</option>
-                    </select>
-                </div>
-                
-                <div class="form-group">
-                    <label for="description">Descrição do Local</label>
-                    <textarea id="description" name="description" required></textarea>
-                </div>
-                
-                <div class="form-group">
-                    <label for="location">Localização (se souber, informe latitude e longitude)</label>
-                    <input type="text" id="location" name="location">
-                </div>
-                
-                <div class="form-group">
-                    <label for="images">Imagens do Local (máximo 3 imagens)</label>
-                    <div class="file-input">
-                        <input type="file" id="images" name="images" accept="image/*" multiple>
-                        <p>Clique para selecionar ou arraste as imagens aqui</p>
-                    </div>
-                </div>
-                
-                <div class="form-group">
-                    <label for="additional-info">Informações Adicionais</label>
-                    <textarea id="additional-info" name="additional-info"></textarea>
-                </div>
-                
-                <button type="submit" class="submit-btn">Enviar Contribuição</button>
-            </form>
-        </div>
+        <!-- Botão para o Google Forms -->
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdRUAccHIzrxwif3YRXC8WQ33oWYaM5ISMO95BKEIwJLZ32Jg/viewform?usp=dialog" target="_blank" class="google-form-btn">
+            Acessar Formulário de Contribuição
+        </a>
         
         <p>Agradecemos sua contribuição para tornar o Mapa UFU uma ferramenta cada vez mais útil para toda a comunidade acadêmica!</p>
         
@@ -187,13 +154,5 @@
     <footer class="footer">
         <p>&copy; 2025 Mapa UFU - Campus Santa Mônica. Todos os direitos reservados.</p>
     </footer>
-    
-    <script>
-        document.getElementById('contribute-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Obrigado pela sua contribuição! Nossa equipe irá analisar as informações enviadas.');
-            this.reset();
-        });
-    </script>
 </body>
 </html>
