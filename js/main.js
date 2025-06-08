@@ -1,5 +1,4 @@
 import { MAPBOX_ACCESS_TOKEN } from './config.js'; 
-console.log('MAPBOX_ACCESS_TOKEN:', MAPBOX_ACCESS_TOKEN);
 
 if (typeof MAPBOX_ACCESS_TOKEN === 'undefined') {
     throw new Error("O Token de Acesso do Mapbox não está definido. Por favor, certifique-se de que o arquivo js/config.js foi criado, contém seu token e está incluído no seu HTML antes de main.js.");
