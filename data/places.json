@@ -76,9 +76,9 @@
     {
         "name": "Art Mineira",
         "evaluation": "",
-        "category": "-48.25092812403199",
-        "latitude": "Alimentação",
-        "longitude": "-18.91965234117612",
+        "category": "Alimentação",
+        "latitude": "-18.91965234117612",
+        "longitude": "-48.25092812403199",
         "description": "Restaurante caseiro e mineiro, há opção de self service e marmita.<br />Preço convidativo, comida simples mas gostosa",
         "images": [
             "ARTE_MINEIRA/unnamed (3).webp",
@@ -118,6 +118,18 @@
         "id": "CC"
     },
     {
+        "name": "Centro de Documentação e Pesquisa em História",
+        "evaluation": "",
+        "category": "Museu",
+        "latitude": "-18.919900699366573",
+        "longitude": "-48.26011865569197",
+        "description": "O Centro de Documentação e Pesquisa em História-CDHIS é um órgão do Instituto de História da Universidade Federal de Uberlândia constituído como lugar de guarda da memória institucional, regional e de produção de saberes sobre a preservação da memória coletiva.",
+        "images": [
+            "CDHIS/Captura de tela 2025-06-08 201916.png"
+        ],
+        "id": "Centro de Documentação e Pesquisa em História"
+    },
+    {
         "name": "Centro Esportivo",
         "evaluation": "",
         "category": "Lazer",
@@ -152,8 +164,8 @@
         "name": "Coordenação",
         "evaluation": "",
         "category": "Administrativo",
-        "latitude": "-18.918332840114857",
-        "longitude": "-48.25537496140839",
+        "latitude": "-18.91840701414019",
+        "longitude": "-48.255927736866774",
         "description": "Localizada no segundo andar do bloco 1I, a coordenação do curso de arquitetura e urbanismo da Faued (Faculdade de arquitetura e urbanismo e design) da UFU, é o setor responsável pela atividades administrativas e burucraticas relacionadas ao curso. Formada pela atual coordenadora: Professora Rita Saramago e secretário: Marco Aurélio. A coordenação desempenha um papel crucial na gestão e desenvolvimento do curso, atuando como um elo entre alunos, professores, corpo administrativo e a comunidade acadêmica. Suas responsabilidades envolvem tanto aspectos pedagógicos quanto administrativos e de gestão. Contatos para comunicação, email:cocau@ufu.br , telefone: +55 34 3239-4213 R:4213<br /><br /><br />https://faued.ufu.br/graduacao/arquitetura-e-urbanismo https://faued.ufu.br/contato",
         "images": [
             "COORDENACAO/DSC00675.JPG",
@@ -194,9 +206,9 @@
     {
         "name": "D'Ville Supermercados",
         "evaluation": "4",
-        "category": "-48.265007422113165",
-        "latitude": "Alimentação",
-        "longitude": "-18.920466508586536",
+        "category": "Alimentação",
+        "latitude": "-18.920466508586536",
+        "longitude": "-48.265007422113165",
         "description": "Supermercado próximo à UFU, completo, com bastante variedade como frutas e legumes, sushi e outros produtos.<br />O preço é mais salgado do que outros supermercados que são atacadistas, mas possui boas promoções, principalmente de bebidas.",
         "images": [
             "DVILLE_SANTA_MARIA/unnamed (1).webp",
@@ -207,9 +219,9 @@
     {
         "name": "D'Ville Supermercados",
         "evaluation": "4",
-        "category": "-48.2546218673747",
-        "latitude": "Alimentação",
-        "longitude": "-18.91975792663196",
+        "category": "Alimentação",
+        "latitude": "-18.91975792663196",
+        "longitude": "-48.2546218673747",
         "description": "Supermercado bem próximo à UFU, completo, com bastante variedade como frutas e legumes, sushi e outros produtos.<br />O preço é mais salgado do que outros supermercados que são atacadistas, mas possui boas promoções, principalmente de bebidas.",
         "images": [
             "DVILLE_SANTA_MONICA/unnamed (4).webp",
@@ -262,9 +274,9 @@
     {
         "name": "Flex Bar",
         "evaluation": "4",
-        "category": "-48.25301422953028",
-        "latitude": "Alimentação",
-        "longitude": "-18.91716046871193",
+        "category": "Alimentação",
+        "latitude": "-18.91716046871193",
+        "longitude": "-48.25301422953028",
         "description": "Um antigo posto de gasolina que agora é bar e durante os almoços de segunda à sexta tem PF (prato feito) no almoço.<br />O preço é muito bom e a comida é gostosa<br />https://www.instagram.com/oflexbar/",
         "images": [
             "FLEX/Captura de tela 2025-06-04 174955.png",
@@ -301,6 +313,20 @@
         "id": "Informa 3D"
     },
     {
+        "name": "Intercampi",
+        "evaluation": "",
+        "category": "Transporte",
+        "latitude": "-18.91727533861655",
+        "longitude": "-48.25495100187378",
+        "description": "O Intercampi é o serviço gratuito de transporte interno oferecido pela UFU, ligando os diversos campi da universidade. No campus Santa Mônica, ele é essencial para facilitar o deslocamento de estudantes, professores e servidores entre unidades distantes, como os campi Umuarama, Educação Física, Glória e outros. Com horários fixos ao longo do dia, o Intercambio contribui para a integração entre os espaços da universidade e garante mais acessibilidade e praticidade na rotina acadêmica. Os horários podem ser encontrados no aplicativo UFU.",
+        "images": [
+            "INTERCAMPI/Captura de tela 2025-06-08 194320.png",
+            "INTERCAMPI/Captura de tela 2025-06-08 194356.png",
+            "INTERCAMPI/imagem_chamada_dsc_7912.jpg.jpeg"
+        ],
+        "id": "Intercampi"
+    },
+    {
         "name": "Kalunga",
         "evaluation": "5",
         "category": "Gráfica e papelaria",
@@ -330,14 +356,14 @@
         "id": "Labtac"
     },
     {
-        "name": "Vocês têm sorte! Depois de muito tempo aguardando, o LAMOP chegou ao campus Santa Mônica.",
-        "evaluation": "O Laboratório de Modelos e Protótipos (LAMOP) é onde o filho chora e a mãe não vê. É lá que são desenvolvidas a representações tridimensionais também conhecidas como Mock-ups, maquetes e protótipos.",
-        "category": "",
-        "latitude": "É equipado com uma série de ferramentas e equipamentos para trabalho em madeira, sem contar no Anjo Fábio, que ajuda demais no desenvolvimento dos trabalhos e evita que algum desatento corte o dedo.",
-        "longitude": "",
-        "description": "",
+        "name": "LAMOP",
+        "evaluation": "",
+        "category": "Laboratórios e Núcleos",
+        "latitude": "-18.918351305794545",
+        "longitude": "-48.2568316486155",
+        "description": "Vocês têm sorte! Depois de muito tempo aguardando, o LAMOP chegou ao campus Santa Mônica.<br />O Laboratório de Modelos e Protótipos (LAMOP) é onde o filho chora e a mãe não vê. É lá que são desenvolvidas a representações tridimensionais também conhecidas como Mock-ups, maquetes e protótipos.<br />É equipado com uma série de ferramentas e equipamentos para trabalho em madeira, sem contar no Anjo Fábio, que ajuda demais no desenvolvimento dos trabalhos e evita que algum desatento corte o dedo. Coordenador: Professor Juliano Aparecido Pereira",
         "images": [],
-        "id": "Vocês têm sorte! Depois de muito tempo aguardando, o LAMOP chegou ao campus Santa Mônica."
+        "id": "LAMOP"
     },
     {
         "name": "Lapex",
@@ -357,9 +383,9 @@
     {
         "name": "La Biblioteca",
         "evaluation": "3,5",
-        "category": "-48.258037716629104",
-        "latitude": "Alimentação",
-        "longitude": "-18.915872160780964",
+        "category": "Alimentação",
+        "latitude": "-18.915872160780964",
+        "longitude": "-48.258037716629104",
         "description": "Bar próximo a UFU, que serve também almoço atualmente das 11h30 às 14h30 todos os dias.<br />Há opção de self-service e alguns tipos de marmitas. Há uma boa variedade de comidas.<br />Para saber como funciona como bar, confira a seção \"bares\" no mapa.<br />https://www.instagram.com/labibliotecaudi/",
         "images": [
             "LA_BIBLIO/Captura de tela 2025-05-31 173537.png"
@@ -383,26 +409,26 @@
         "id": "LCC"
     },
     {
-        "name": "LED",
+        "name": "LED e LAFIA",
         "evaluation": "",
         "category": "Laboratórios e Núcleos",
         "latitude": "-18.918322690832518",
         "longitude": "-48.255417876748965",
-        "description": "O laboratorio de expressão digital (LED), localizado no terreo do bloco 1I onde são exploradas diversas abordagens sobre tecnologia digital e processos criativos. No LED são desenvolvidas atividades como:Criação/análise de artes gráficas e digitais. Impressão 3D.Desenvolvimento de aplicações web. Disponibilidade de notebooks pertencentes ao laboratório aos discentes. Disponibilidade de espaço para realização de atividades disciplinares. Visando complementar os serviços prestados pelo Centro de Tecnologia da Informação e Comunicação – CTIC/UFU, o LED realiza ações e orientações técnicas na área de Tecnologia voltadas às coordenações dos cursos de Arquitetura e Urbanismo e Design, contemplando diversos setores, departamentos e núcleos da FAUED. Horário de Atendimento: 08:00h às 12:00h / 13:00h às 17:00h Atendimento Presencial: Segunda, quarta e sexta-feira. Coordenador(a): Gabriela Pereira Carneiro Técnico(a) responsável: Francisco Castro. Endereço de contato, Telefones: 34 3239-4509 / 34 99983-8158 Email: francisco.castro@ufu.br<br /><br /><br />https://faued.ufu.br/unidades/laboratorio/laboratorio-de-expressao-digital https://www.instagram.com/led.faued/<br />",
+        "description": "O espaço acolhe dois laboratórios: o LAFIA (Laboratório de Fotografia e Imagens Animadas) e o LED (Laboratório de Expressão Digital).<br />O LAFIA aprimora aspectos importantes para a formação do design, melhorando a qualificação dos alunos em áreas atuais como captação, manipulação e criação de imagens digitais que permitem o desenvolvimento de animações.O espaço permite uma troca de experiencias tecnológicas de pesquisa e extensão, permitindo que pesquisadores possam utilizar o espaço para captura de movimentos, posturas, produtos, registro de imagem para pedidos de propriedade intelectual e experimentos relacionados a novas formas de comunicação visual. Coordenador: Professor João Carlos Riccó Plácido da Silva<br />O LED é o espaço para explorar as diversas abordagens sobre tecnologia digital e processos criativos. No LED são desenvolvidas atividades como:Criação/análise de artes gráficas e digitais. Impressão 3D.Desenvolvimento de aplicações web. Disponibilidade de notebooks pertencentes ao laboratório aos discentes. Disponibilidade de espaço para realização de atividades disciplinares. Horário de Atendimento: 08:00h às 12:00h / 13:00h às 17:00h Atendimento Presencial: Segunda, quarta e sexta-feira. Coordenador(a): Professora Gabriela Pereira Carneiro. Técnico(a) responsável: Francisco Castro. Endereço de contato, Telefones: 34 3239-4509 / 34 99983-8158 Email: francisco.castro@ufu.br<br />",
         "images": [
-            "LED/DSC00694.JPG",
-            "LED/DSC00713.JPG",
-            "LED/DSC00714.JPG",
-            "LED/DSC00716.JPG"
+            "LED e LAFIA/DSC00694.JPG",
+            "LED e LAFIA/DSC00713.JPG",
+            "LED e LAFIA/DSC00714.JPG",
+            "LED e LAFIA/DSC00716.JPG"
         ],
         "id": "LED"
     },
     {
         "name": "LOL 3Q",
         "evaluation": "4",
-        "category": "-48.25744566488863",
-        "latitude": "Alimentação",
-        "longitude": "-18.91753647162982",
+        "category": "Alimentação",
+        "latitude": "-18.91753647162982",
+        "longitude": "-48.25744566488863",
         "description": "É uma boa lanchonete com diversas opções de salgados, milkshakes, cafés, etc.<br />Fica no espaço de convivência do bloco 3Q, com algumas mesas, ótimo para ficar conversando com os amigos e comendo.<br />Fica a dica: pão de queijo com nutella, pão de queijo com patê de frango e qualquer milkshake.",
         "images": [
             "LOL_3Q/Captura de tela 2025-05-31 172202.png",
@@ -414,9 +440,9 @@
     {
         "name": "LOL CC",
         "evaluation": "4",
-        "category": "-48.257405084803715",
-        "latitude": "Alimentação",
-        "longitude": "-18.91869850037935",
+        "category": "Alimentação",
+        "latitude": "-18.91869850037935",
+        "longitude": "-48.257405084803715",
         "description": "Lanchonete LOL localizada no Centro de Convivência (CC) do campus.<br />Opções variadas de salgados, cafés como as outras.<br />Por ficar localizado no CC é um ótimo ambiente para sentar, comer e descontrair com os amigos.<br />Fica a dica: nesse LOL tem casquinha de sorvete, geralmente tem algum brechó ou feirinha acontecendo por perto, é uma opção legal para ficar depois de um almoço no RU e pegar um docinho :)",
         "images": [
             "LOL_CC/Captura de tela 2025-05-31 180729.png",
@@ -427,9 +453,9 @@
     {
         "name": "LOL Restaurante",
         "evaluation": "4",
-        "category": "-48.25947306925216",
-        "latitude": "Alimentação",
-        "longitude": "-18.91924314473215",
+        "category": "Alimentação",
+        "latitude": "-18.91924314473215",
+        "longitude": "-48.25947306925216",
         "description": "O maior LOL do campus Santa Mônica, com mais variedades de comida. Funciona como lanchonete, assim como os outros, e têm self-service no almoço.<br />O ponto de alimentação com mais variedade.<br />Fica a dica: apesar de ser considerado longe do bloco da Arquitetura é bem frequentado, o almoço apesar do preço um pouco mais salgado é gostoso, único LOL que tem casquinha de açaí, geralmente é a opção quando a comida do RU não está muito apetitosa.",
         "images": [
             "LOL_RESTAURANTE/IMG_20211115_175638.webp",
@@ -438,6 +464,16 @@
             "LOL_RESTAURANTE/unnamed.webp"
         ],
         "id": "LOL Restaurante"
+    },
+    {
+        "name": "LUDE",
+        "evaluation": "",
+        "category": "Laboratórios e Núcleos",
+        "latitude": "-18.918368313504214",
+        "longitude": "-48.255414682661424",
+        "description": "O Laboratório de Usabilidade e Design Ergonômico (LUDE) é destinado ao estudo, pesquisa e desenvolvimento científico e tecnológico nas áreas de ergonomia, usabilidade, desenvolvimento de projeto de produto, tecnologia assistiva, interiores e sistemas informacionais; visando à materialização de conceitos, consolidação do aprendizado teórico e do conhecimento da abrangência e aplicabilidade do Design Ergonômico. Com certeza vão te chamar para ser voluntário em alguma pesquisa. Se puder, participe! Coordenador: Professor Lucas Farinelli Pantaleão",
+        "images": [],
+        "id": "LUDE"
     },
     {
         "name": "Master Cópias",
@@ -453,6 +489,81 @@
         "id": "Master Cópias"
     },
     {
+        "name": "Museu Universitário de Arte",
+        "evaluation": "",
+        "category": "Museu",
+        "latitude": "-18.924332593856782",
+        "longitude": "-48.28427248252849",
+        "description": "O Museu Universitário de Arte (MUnA) desenvolve atividades de ensino, pesquisa e extensão nas áreas de História, Teoria, Crítica e Museologia da Arte, além de Educação e Arte em Museus. Promove cursos, seminários, palestras, oficinas e outras atividades e mantém uma política de exposições periódicas voltada para o fomento da produção, discussão e reflexão das artes visuais. É um órgão complementar do Instituto de Artes. Conta com acervo de obras modernas e contemporâneas, espaços expositivos, reserva técnica, sala de conservação e restauro, oficina de ação educativa e auditório com 60 lugares. Aberto de segunda a quinta-feira, das 8h30 às 18h30; na sexta-feira, das 8h30 às 21h30; e no sábado, das 10h às 17h.<br /><br /><br />www.muna.ufu.br",
+        "images": [
+            "MUNA/MUNA.jpg"
+        ],
+        "id": "Museu Universitário de Arte"
+    },
+    {
+        "name": "Museu de Biodiversidade do Cerrado",
+        "evaluation": "",
+        "category": "Museu",
+        "latitude": "-18.873420635366518",
+        "longitude": "-48.285475524087474",
+        "description": "O Museu da Biodiversidade do Cerrado é uma unidade especial do Instituto de Biologia que funciona como espaço de divulgação científica socioeducativa e núcleo de pesquisa na área de educação em ciências. Há um acervo didático, com espécies animais e vegetais representativas do bioma Cerrado, em exposição permanente e um acervo científico de répteis, anfíbios, mamíferos, aves e invertebrados, resultante de pesquisas acadêmicas. Foi inaugurado em 2000 em um anexo da UFU, mas em 2002, a coleção didática foi transferida para o Parque Municipal Victório Siquierolli. O museu e o parque ficam abertos para visitação de terça a domingo, das 8h às 17h30.",
+        "images": [
+            "MUSEU DE BIODIVERSIDADE DO CERRADO/Captura de tela 2025-06-08 202829.png"
+        ],
+        "id": "Museu de Biodiversidade do Cerrado"
+    },
+    {
+        "name": "Museu de Ciências - Diversão com Ciência e Arte",
+        "evaluation": "",
+        "category": "Museu",
+        "latitude": "-18.949575535595464",
+        "longitude": "-48.27846050793966",
+        "description": "O Museu Diversão com Ciência e Arte (Dica), do Instituto de Física, dissemina a cultura científica em um espaço onde ciência, tecnologia e conhecimento são relacionados ao cotidiano de forma contextualizada e divertida. Promove atividades como Mostra de Física, Trilha do Sistema Solar, Exposição Passarinhar, Telescópio Itinerante e Cine Dica. É aberto de terça a sexta-feira, das 9h às 18h. Os agendamentos devem ser feitos na página www.dica.ufu.br e outras informações podem ser obtidas pelo e-mail dica.ufu@gmail.com e pelos telefones (34) 3230-9517 / 3230-9518. As atividades acontecem no Campus Santa Mônica e no Parque Gávea (Av. dos Vinhedos, 555, Bairro Gávea, Uberlândia-MG).",
+        "images": [
+            "MUSEU DE CIÊNCIAS/Captura de tela 2025-06-08 203536.png"
+        ],
+        "id": "Museu de Ciências - Diversão com Ciência e Arte"
+    },
+    {
+        "name": "Museu de Minerais e Rochas",
+        "evaluation": "",
+        "category": "Museu",
+        "latitude": "-18.919900699366575",
+        "longitude": "-48.26011865569192",
+        "description": "Vinculado ao Instituto de Geografia, tem exposição permanente de minerais, rochas, fósseis e recursos energéticos, como petróleo e carvão mineral. Além de prover material para ensino e pesquisa na área de geologia, recebe visitas da população em geral interessada em entender como a Terra se formou e vem evoluindo ao longo do tempo geológico. Conta com mais de 250 exemplares, que provêm tanto de Uberlândia quanto de outras cidades e, inclusive, de outros países. Foi criado em 1987 e, desde 1992, funciona no Bloco 1Q do Campus Santa Mônica.<br />Funciona de segunda a sexta-feira, das 8h30 às 11h30 e das 14h às 17h.<br /><br /><br />ig@ufu.br",
+        "images": [
+            "MUSEU DE MINERAIS E ROCHAS/download (1).jpeg",
+            "MUSEU DE MINERAIS E ROCHAS/download (2).jpeg",
+            "MUSEU DE MINERAIS E ROCHAS/download.jpeg",
+            "MUSEU DE MINERAIS E ROCHAS/interior-do-museu.jpg"
+        ],
+        "id": "Museu de Minerais e Rochas"
+    },
+    {
+        "name": "Museu do índio",
+        "evaluation": "",
+        "category": "Museu",
+        "latitude": "-18.918335875179594",
+        "longitude": "-48.26447405384786",
+        "description": "O Museu do Índio tem como missão colecionar, proteger, interpretar e difundir bens culturais indígenas, buscando o diálogo com a comunidade. Foi criado em 1987 e está vinculado à Pró-Reitoria de Graduação. O acervo é composto por cerca de 2.500 objetos das categorias cerâmica, plumária, trançados, armas, indumentária, artefatos mágicos e lúdicos. A cada ano, é visitado por aproximadamente 13 mil alunos e professores do ensino fundamental e médio, além de outras 1.500 pessoas, em média, do público espontâneo. Funciona de segunda a sexta-feira, das 8h às 12h e das 13h30 às 17h30. Visitas de grupos neste horário ou em outros períodos devem ser agendadas.<br /><br /><br />musindio@ufu.br",
+        "images": [
+            "MUSEU DO ÍNDIO/Captura de tela 2025-06-08 204149.png",
+            "MUSEU DO ÍNDIO/museudoindio.jpeg",
+            "MUSEU DO ÍNDIO/museudoindio02.jpeg"
+        ],
+        "id": "Museu do índio"
+    },
+    {
+        "name": "NDS",
+        "evaluation": "",
+        "category": "Laboratórios e Núcleos",
+        "latitude": "-18.9182665733329",
+        "longitude": "-48.25543639945192",
+        "description": "O Núcleo de Design Sustentável (NDS), vinculado à Faculdade de Arquitetura e Urbanismo e Design da Universidade Federal de Uberlândia (FAUeD/UFU), é uma unidade de excelência dedicada à pesquisa e ao desenvolvimento de projetos de ensino, pesquisa, inovação e extensão em Design, sob a perspectiva do design estratégico sustentável.<br />O NDS promove a criatividade, consciência e responsabilidade, buscando desenvolver soluções inovadoras por meio de iniciativas relacionadas ao design de produtos, gráfico e de interiores. Coordenadora: Professora Juliana Cardoso Braga",
+        "images": [],
+        "id": "NDS"
+    },
+    {
         "name": "NEURB",
         "evaluation": "",
         "category": "Laboratórios e Núcleos",
@@ -466,6 +577,18 @@
             "NEURB/DSC00679.JPG"
         ],
         "id": "NEURB"
+    },
+    {
+        "name": "Núcleo de Preservação da Memória do Hospital de Clínicas da UFU",
+        "evaluation": "",
+        "category": "Museu",
+        "latitude": "-18.881825718659407",
+        "longitude": "-48.26006419440007",
+        "description": "Organiza, documenta e zela pela conservação e guarda do memorial de todo o complexo hospitalar.",
+        "images": [
+            "NPM-HCU/imagem_destaque_reitoria_1-.jpg"
+        ],
+        "id": "Núcleo de Preservação da Memória do Hospital de Clínicas da UFU"
     },
     {
         "name": "NUPLI",
@@ -653,9 +776,9 @@
     {
         "name": "Tenda do café",
         "evaluation": "3",
-        "category": "-48.25676837534271",
-        "latitude": "Alimentação",
-        "longitude": "-18.917134749599168",
+        "category": "Alimentação",
+        "latitude": "-18.917134749599168",
+        "longitude": "-48.25676837534271",
         "description": "Lanchonete localizada no bloco 5O (a mais próxima do bloco 5O-B), ideal para lanches rápidos, há opções de salgados, doces, cafés, etc.<br />Há mesas para consumo dos alimentos.<br />Fica a dica: não é a lanchonete favorita da maioria dos alunos; apesar da proximidade com o bloco onde ocorrem as aulas, o LOL do 3Q é geralmente escolhido. Apesar disso, há alguns benefícios, por exemplo as atendentes esquentam marmita no micro-ondas se solicitado.",
         "images": [
             "TENDA_DO_CAFE/Captura de tela 2025-05-31 172537.png"

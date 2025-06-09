@@ -52,23 +52,31 @@ const map = new mapboxgl.Map({
 // Cores das categorias
 const categoryColors = {
     'Laboratórios e Núcleos': '#283aa0', // Renamed from 'Laboratório'
-    'Alimentação': '#EA4335',
+    'Alimentação': '#832b23',
     'Administrativo': '#187230',
-    'Lazer': '#FBBC05',
-    'Bloco': '#00BFA5',         // New color for "Bloco"
+    'Lazer': '#FB29CC',
+    'Bloco': '#000000',         // New color for "Bloco"
     'Transporte': '#009688',      // New category
     'Gráfica e papelaria': '#FFB300', // New category
-    'Entrada': '#757575'          // New category
+    'Entrada': '#757575',         // New category - color might be unused if marker is custom
+    'Museu': '#673AB7'           // Added color for Museu
 };
 
 // Armazena todos os marcadores
 let markers = [];
 let places = [];
 // Update activeFilters to include categories from your places.json by default
+// Reordered as requested
 let activeFilters = [
-    'Bloco', 'Lazer', 'Laboratórios e Núcleos', 'Administrativo',
-    'Transporte', 'Gráfica e papelaria',
-    'Entrada', 'Alimentação'
+    'Entrada',
+    'Transporte',
+    'Bloco',
+    'Laboratórios e Núcleos',
+    'Administrativo',
+    'Lazer',
+    'Alimentação',
+    'Gráfica e papelaria',
+    'Museu' // Added Museu to active filters
 ];
 let currentPlaceId;
 
@@ -124,14 +132,17 @@ function addMarkersToMap() {
             // Cria um elemento div simples para o marcador
             const el = document.createElement('div');
             el.className = 'marker';
-            // Ensure the category exists in categoryColors, otherwise use a default
-            el.style.backgroundColor = categoryColors[place.category] || '#CCCCCC'; // Default to gray if category color undefined
-            el.style.width = isMobile ? '30px' : '20px';
-            el.style.height = isMobile ? '30px' : '20px';
-            el.style.borderRadius = '50%';
-            el.style.border = '2px solid white';
-            el.style.boxShadow = '0 0 5px rgba(0, 0, 0, 0.3)';
-            
+
+            // Default circular marker styling for all categories
+
+            if (true) { // This 'if(true)' is just to maintain the else structure, can be removed if Lazer is also default
+                el.style.backgroundColor = categoryColors[place.category] || '#CCCCCC'; // Default to gray
+                el.style.width = isMobile ? '30px' : '20px';
+                el.style.height = isMobile ? '30px' : '20px';
+                el.style.borderRadius = '50%';
+                el.style.border = '2px solid white';
+                el.style.boxShadow = '0 0 5px rgba(0, 0, 0, 0.3)';
+            }
             // Cria um marcador padrão com âncora no centro
             const marker = new mapboxgl.Marker({
                 element: el,
@@ -451,6 +462,40 @@ document.querySelectorAll('.category-filter').forEach(filter => {
     });
 });
 
+// Function to update all filter checkboxes based on activeFilters array
+function updateFilterCheckboxes() {
+    document.querySelectorAll('.category-filter').forEach(checkbox => {
+        checkbox.checked = activeFilters.includes(checkbox.value);
+    });
+}
+
+// Function to handle "Select/Deselect All"
+function setupSelectAllFilters() {
+    const selectAllBtn = document.getElementById('select-all-filters-btn');
+    if (!selectAllBtn) return;
+
+    selectAllBtn.addEventListener('click', () => {
+        const allCategories = Object.keys(categoryColors); // Or a predefined list of all possible categories
+        // If all are currently selected (or more than half), deselect all. Otherwise, select all.
+        if (activeFilters.length === allCategories.length) {
+            activeFilters = [];
+            selectAllBtn.textContent = 'Selecionar Todos';
+        } else {
+            activeFilters = [...allCategories];
+            selectAllBtn.textContent = 'Desmarcar Todos';
+        }
+        updateFilterCheckboxes();
+        addMarkersToMap();
+    });
+
+    // Set initial button text
+    const allCategories = Object.keys(categoryColors);
+    if (activeFilters.length === allCategories.length) {
+        selectAllBtn.textContent = 'Desmarcar Todos';
+    } else {
+        selectAllBtn.textContent = 'Selecionar Todos';
+    }
+}
 // Estas funções não são mais usadas, pois estamos adicionando edifícios 3D diretamente na função map.on('load')
 // Mantendo este comentário como referência
 
@@ -556,6 +601,7 @@ map.on('load', () => {
     
     // Configura interações específicas para dispositivos móveis
     setupMobileInteractions();
+    setupSelectAllFilters(); // Initialize the select/deselect all button
 
     // Adiciona o recurso de retângulo (se necessário)
     addRectangleToMap(map);

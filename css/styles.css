@@ -219,7 +219,7 @@ body {
 
 #map {
     width: 100%;
-    height: 100%;
+    height: 96%;
 }
 
 /* Map Filters */
@@ -235,6 +235,17 @@ body {
     max-width: 250px;
 }
 
+.select-all-btn {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
 .map-filters h3 {
     margin-bottom: 10px;
     font-size: 1rem;
