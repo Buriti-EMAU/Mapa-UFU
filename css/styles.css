@@ -529,8 +529,13 @@ body {
 @media (max-width: 768px) {
     /* Header styles */
     .header {
-        display: none; /* Hide the header on mobile */
+        display: flex; 
+        flex-direction: column;
+        padding: 0.5rem;
+        z-index: 30;
+        align-items: center;
     }
+
     
 
 
