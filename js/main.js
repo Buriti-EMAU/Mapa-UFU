@@ -59,7 +59,9 @@ const categoryColors = {
     'Transporte': '#009688',      // New category
     'Gráfica e papelaria': '#FFB300', // New category
     'Entrada': '#757575',         // New category - color might be unused if marker is custom
-    'Museu': '#673AB7'           // Added color for Museu
+    'Museu': '#673AB7',
+    'Bares e Adegas': '#FB9090',
+    'Academia': '#80FF10',          
 };
 
 // Armazena todos os marcadores
@@ -76,7 +78,9 @@ let activeFilters = [
     'Lazer',
     'Alimentação',
     'Gráfica e papelaria',
-    'Museu' // Added Museu to active filters
+    'Museu',
+    'Bares e Adegas',
+    'Academia',
 ];
 let currentPlaceId;
 

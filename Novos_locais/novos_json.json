@@ -1,0 +1,184 @@
+[
+    {
+        "name": "Academia Record",
+        "evaluation": "4",
+        "category": "Academia",
+        "latitude": "-18.92271659417888",
+        "longitude": "-48.247039488166095",
+        "description": "Uma academia bem estruturada, com várias modalidades além da musculação, como natação, porêm uma pouco longe da UFU e com uma mensalidade bem cara no plano completo.<br />https://www.instagram.com/academiarecord/",
+        "images": [
+            "Academia_Record/Foto_Record.PNG"
+        ],
+        "id": "Academia Record"
+    },
+    {
+        "name": "Academia Winners",
+        "evaluation": "3",
+        "category": "Academia",
+        "latitude": "-18.916075821011308",
+        "longitude": "-48.25052083419433",
+        "description": "Academia de bairro antiga, com equipamento pré-históricos, se você curte esse clima de academia oldschool essa é para você<br />Fora isso ela não oferece nada muito especial<br />https://www.instagram.com/academia_winners/",
+        "images": [
+            "Academia_Winners/Foto_Winners.PNG"
+        ],
+        "id": "Academia Winners"
+    },
+    {
+        "name": "Adega 806",
+        "evaluation": "3",
+        "category": "Bares e Adegas",
+        "latitude": "-18.916047391097987",
+        "longitude": "-48.2506769473347",
+        "description": "Locais onde você pode comprar bebidas, doces e possivelmente algumas coisas básicas de mercado.<br />Não possui uma variedade muito grande de Itens para comprar.<br />Caso você more perto vale a pena ir<br />",
+        "images": [
+            "Adega_806/Foto_Adega806.PNG",
+            "Adega_806/Foto_Adega807.PNG"
+        ],
+        "id": "Adega 806"
+    },
+    {
+        "name": "Adega da Vila",
+        "evaluation": "3",
+        "category": "Bares e Adegas",
+        "latitude": "-18.914757823242127",
+        "longitude": "-48.255526912725145",
+        "description": "Locais onde você pode comprar bebidas, doces e possivelmente algumas coisas básicas de mercado.<br />Não possui uma variedade muito grande de Itens para comprar.<br />Caso você more perto vale a pena ir",
+        "images": [
+            "Adega_da_Vila/Foto_Adegadavila.PNG"
+        ],
+        "id": "Adega da Vila"
+    },
+    {
+        "name": "Emporio mais Express",
+        "evaluation": "4",
+        "category": "Bares e Adegas",
+        "latitude": "-18.91827042658725",
+        "longitude": "-48.25269593000241",
+        "description": "Locais onde você pode comprar bebidas, doces e possivelmente algumas coisas básicas de mercado<br />Possui uma variedade maior de Itens para comprar  comparado ao resto das adegas, porém mais caro que ir a um mercado<br />Caso você more perto vale a pena ir",
+        "images": [
+            "Adega_Emporio/Foto_AdegaEmporio.PNG"
+        ],
+        "id": "Emporio mais Express"
+    },
+    {
+        "name": "Whisqueça",
+        "evaluation": "3",
+        "category": "Bares e Adegas",
+        "latitude": "-18.916459693205542",
+        "longitude": "-48.256159515952675",
+        "description": "Locais onde você pode comprar bebidas, doces e possivelmente algumas coisas básicas de mercado.<br />Não possui uma variedade muito grande de Itens para comprar.<br />Caso você more perto vale a pena ir<br />Funcionamento: domingo a quinta 18:30h às 01h<br />sexta e sábado das 18:30 às 04h<br />https://www.instagram.com/disk.whisqueca/",
+        "images": [
+            "Adega_Whisqueca/Foto_Whisqueça.PNG"
+        ],
+        "id": "Whisqueça"
+    },
+    {
+        "name": "Alpha Sports",
+        "evaluation": "3",
+        "category": "Academia",
+        "latitude": "-18.91346447632127",
+        "longitude": "-48.253216021531294",
+        "description": "Academia de bairro com uma estrutura simples e não muito grande, vale a pena para quem morar perto",
+        "images": [
+            "Alfa_Sports/Foto_Alfasports.PNG"
+        ],
+        "id": "Alpha Sports"
+    },
+    {
+        "name": "Alpendre",
+        "evaluation": "5",
+        "category": "Bares e Adegas",
+        "latitude": "-18.9184808298766",
+        "longitude": "-48.24912699386813",
+        "description": "Um lugar com bons drinks para você e os amigos experimentarem, Karaoke, e jogos de carta para vocês se divertirem.<br />Em alguns dias tem música ao vivo<br />https://www.instagram.com/nossoalpendre/",
+        "images": [
+            "Alpendre/Foto_Alpendre.PNG"
+        ],
+        "id": "Alpendre"
+    },
+    {
+        "name": "Apollo 11",
+        "evaluation": "3",
+        "category": "Bares e Adegas",
+        "latitude": "-18.91609953969984",
+        "longitude": "-48.2575363898946",
+        "description": "Fica lolcalizado na Segismundo, próximo a UFU, um lugar bacana para conhecer, tomar uma cerveja ou um frozen enquanto escuta<br />música com os amigos<br />https://www.instagram.com/apollo11.bar/",
+        "images": [
+            "Apollo11/Foto_Apollo11.PNG"
+        ],
+        "id": "Apollo 11"
+    },
+    {
+        "name": "Oripim",
+        "evaluation": "4",
+        "category": "Bares e Adegas",
+        "latitude": "-18.9160824125528",
+        "longitude": "-48.250692733502085",
+        "description": "Um boteco raiz para você tomar aquela cervejinha<br />Melhor momento para ir é durante a noite e a madrugada, geralmente é o after<br />",
+        "images": [
+            "Bar_ORIPIM/Foto_Oripim.PNG"
+        ],
+        "id": "Oripim"
+    },
+    {
+        "name": "Bulkfit",
+        "evaluation": "3",
+        "category": "Academia",
+        "latitude": "-18.91609319626044",
+        "longitude": "-48.259619795596834",
+        "description": "Uma academia bonita e bons aparelhos, porém muito cheia em vários horarios, outras opções podem ser melhores mesmo que mais longe.<br />https://www.instagram.com/bulkfitacademia/",
+        "images": [
+            "Bulk_Fit/Foto_Bulkfit.PNG"
+        ],
+        "id": "Bulkfit"
+    },
+    {
+        "name": "Flex Bar",
+        "evaluation": "",
+        "category": "Bares e Adegas",
+        "latitude": "4",
+        "longitude": "",
+        "description": "-48.253007255473534<br /><br />Um otimo bar para sentar e conversar com os amigos.<br />Cerveja, caipirinha e Frozen são os principais para consumir.<br />O bar também possue porções, de pastel e outros salgados.<br />É uma lugar bom para almoçar também.<br /><br /><br />https://www.instagram.com/oflexbar/<br />",
+        "images": [
+            "Flex_Bar/Foto2_FlexBar.PNG",
+            "Flex_Bar/Foto_FlexBar.PNG"
+        ],
+        "id": "Flex Bar"
+    },
+    {
+        "name": "G1 Fit",
+        "evaluation": "4",
+        "category": "Academia",
+        "latitude": "-18.92305865016592",
+        "longitude": "-48.25798835261729",
+        "description": "Academia de bairro com uma boa estrutura",
+        "images": [
+            "G1_Sports/Foto_G1FIT.PNG"
+        ],
+        "id": "G1 Fit"
+    },
+    {
+        "name": "La Broca",
+        "evaluation": "4",
+        "category": "Bares e Adegas",
+        "latitude": "-18.91760925875958",
+        "longitude": "-48.251715325659845",
+        "description": "Um bar com Karaoke para você se divertir com os amigos<br />https://www.instagram.com/labrocaoficial/",
+        "images": [
+            "La_Broca/Foto_LaBroca.PNG"
+        ],
+        "id": "La Broca"
+    },
+    {
+        "name": "Power Sports",
+        "evaluation": "5",
+        "category": "Academia",
+        "latitude": "-18.91948391922394",
+        "longitude": "-48.24445877100113",
+        "description": "Uma otima academia de bairro, possui uma boa variedade de aparelhos, com um horário de funcionamento muito flexivel (das 6:00 até as 00:00)<br />Outras modalidades além de musculação, como fitdance e Muay Thai<br />Mensalidade não tão cara (120 reais) e com poucos momentos cheios no dia.<br />Se você mora perto é uma otima escolha.<br />https://www.instagram.com/powersportcenter/",
+        "images": [
+            "Power_Sports/Foto_PowerSports.PNG"
+        ],
+        "id": "Power Sports"
+    }
+]
