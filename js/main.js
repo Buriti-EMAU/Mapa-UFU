@@ -141,8 +141,8 @@ function addMarkersToMap() {
 
             if (true) { // This 'if(true)' is just to maintain the else structure, can be removed if Lazer is also default
                 el.style.backgroundColor = categoryColors[place.category] || '#CCCCCC'; // Default to gray
-                el.style.width = isMobile ? '24px' : '16px'; // Decreased size
-                el.style.height = isMobile ? '24px' : '16px'; // Decreased size
+                el.style.width = isMobile ? '20px' : '16px'; // Decreased size
+                el.style.height = isMobile ? '20px' : '16px'; // Decreased size
                 el.style.borderRadius = '50%';
                 el.style.border = '2px solid white';
                 el.style.boxShadow = '0 0 5px rgba(0, 0, 0, 0.3)';
@@ -647,7 +647,7 @@ function setupMobileInteractions() {
     // Ajusta o tamanho do marcador para dispositivos móveis
     function updateMarkerSize() {
         const markerElements = document.querySelectorAll('.marker');
-        const size = isMobile ? '24px' : '16px'; // Adjusted to be consistent with initial creation
+        const size = isMobile ? '20px' : '16px'; // Adjusted to be consistent with initial creation
         
         markerElements.forEach(marker => {
             marker.style.width = size;
