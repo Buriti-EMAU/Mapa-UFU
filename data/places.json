@@ -176,6 +176,18 @@
         ],
         "id": "Coordenação"
     },
+
+    { 
+        "name": "Direção",
+        "evaluation": "",
+        "category": "Administrativo",
+        "latitude": "-18.91850701414019",
+        "longitude": "-48.257027736866774",
+"description": " Em uma galáxia muito, muito próxima, conhecida como Bloco 1i, existe uma sala onde vivem os seres poderosos do planeta FAUeD, mais conhecidas como as secretárias (não conta pra minha chefe essa parte). Assim como o Conselho Jedi cuida dos jovens padawans e mestres, aqui cuidamos dos professores, alunos e do espaço físico. E não pense que a vida na diretoria é fácil! É preciso manter a ordem em um universo cheio de asteroides chamados \"reuniões de conselho\", \"relatórios\" e \"processos internos\". É como pilotar a Millennium Falcon movida a café por um campo de destroços. Sim, estamos falando da Diretoria da Faculdade de Arquitetura e Urbanismo e Design, ou como alguns preferem, o povo que cuida da Burocracia! Lembre-se pequeno padawan: aqui não resolvemos suas matérias, isso é com a sua coordenação. Que a Força esteja com você, mas, se ela não estiver, entre em contato: faued@ufu.br, +55 34 3239-4373.",
+        "images": [ 
+        ],
+        "id": "Direção"
+    },
     {
         "name": "CopyTem Copiadora",
         "evaluation": "4,5",
