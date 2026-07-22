@@ -571,6 +571,8 @@ map.on('load', () => {
     
     // Adiciona edifícios do OSM com visibilidade aprimorada
     try {
+        const firstSymbolLayerId = getFirstSymbolLayerId();
+
         map.addLayer({
             'id': 'osm-3d-buildings',
             'source': 'composite',
@@ -601,7 +603,7 @@ map.on('load', () => {
                 ],
                 'fill-extrusion-opacity': 0.9
             }
-        });
+        }, firstSymbolLayerId);
         console.log('Successfully added OSM buildings layer with enhanced visibility');
         
         // Em dispositivos móveis, começa com os edifícios 3D ocultos
