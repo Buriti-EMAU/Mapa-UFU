@@ -251,6 +251,37 @@ function removeIsochrone() {
     }
 }
 
+function applyBlueBuildingStyle() {
+    const buildingColors = {
+        fill: '#bfdcff',
+        outline: '#8ab8ee',
+        extrusion: '#a9d1ff'
+    };
+
+    map.getStyle().layers.forEach(layer => {
+        if (!layer || !layer.id || !layer.id.includes('building')) {
+            return;
+        }
+
+        try {
+            if (layer.type === 'fill') {
+                map.setPaintProperty(layer.id, 'fill-color', buildingColors.fill);
+                map.setPaintProperty(layer.id, 'fill-outline-color', buildingColors.outline);
+            }
+
+            if (layer.type === 'line') {
+                map.setPaintProperty(layer.id, 'line-color', buildingColors.outline);
+            }
+
+            if (layer.type === 'fill-extrusion') {
+                map.setPaintProperty(layer.id, 'fill-extrusion-color', buildingColors.extrusion);
+            }
+        } catch (error) {
+            console.warn(`Nao foi possivel atualizar a camada de edificio ${layer.id}.`, error);
+        }
+    });
+}
+
 // Busca e exibe a isócrona para uma determinada localização
 async function fetchAndDisplayIsochrone(longitude, latitude) {
     console.log(`[Isochrone] Attempting to fetch for Lng: ${longitude}, Lat: ${latitude}`);
@@ -258,32 +289,33 @@ async function fetchAndDisplayIsochrone(longitude, latitude) {
 
     const walkingTime = 14; // 14 minutos de distância a pé
     const profile = 'mapbox/walking'; // Perfil para caminhada
-    // Ensure MAPBOX_ACCESS_TOKEN is used here, not an undefined mapboxToken
+
     if (typeof MAPBOX_ACCESS_TOKEN === 'undefined') {
-        console.error("[Isochrone] MAPBOX_ACCESS_TOKEN is not defined!");
+        console.error('[Isochrone] MAPBOX_ACCESS_TOKEN is not defined!');
         return;
     }
+
     const apiUrl = `https://api.mapbox.com/isochrone/v1/${profile}/${longitude},${latitude}?contours_minutes=${walkingTime}&polygons=true&access_token=${MAPBOX_ACCESS_TOKEN}`;
-    console.log("[Isochrone] API URL:", apiUrl);
+    console.log('[Isochrone] API URL:', apiUrl);
 
     try {
         const response = await fetch(apiUrl);
-        console.log("[Isochrone] API response status:", response.status);
+        console.log('[Isochrone] API response status:', response.status);
 
         if (!response.ok) {
-            const errorText = await response.text(); // Obtém o texto do erro bruto primeiro
+            const errorText = await response.text();
             console.error(`[Isochrone] Error fetching: ${response.status} ${response.statusText}. Response body:`, errorText);
             try {
-                const errorData = JSON.parse(errorText); // Tenta analisar como JSON
-                console.error("[Isochrone] Parsed error data:", errorData);
-            } catch (e) {
+                const errorData = JSON.parse(errorText);
+                console.error('[Isochrone] Parsed error data:', errorData);
+            } catch (error) {
                 // Se não for JSON, o texto bruto já foi registrado.
             }
             return;
         }
 
         const isochroneData = await response.json();
-        console.log("[Isochrone] Received data:", isochroneData);
+        console.log('[Isochrone] Received data:', isochroneData);
 
         if (!isochroneData || !isochroneData.features || isochroneData.features.length === 0) {
             console.warn('[Isochrone] Data received is empty or has no features. Features:', isochroneData ? isochroneData.features : 'undefined');
@@ -291,14 +323,14 @@ async function fetchAndDisplayIsochrone(longitude, latitude) {
         }
 
         if (map.isStyleLoaded()) {
-            console.log("[Isochrone] Map style is loaded. Adding source and layer.");
-            // Verificações defensivas, embora removeIsochrone deva lidar com isso
+            console.log('[Isochrone] Map style is loaded. Adding source and layer.');
+
             if (map.getSource(ISOCHRONE_SOURCE_ID)) {
-                console.warn("[Isochrone] Source still exists. Removing before adding new one.");
+                console.warn('[Isochrone] Source still exists. Removing before adding new one.');
                 map.removeSource(ISOCHRONE_SOURCE_ID);
             }
             if (map.getLayer(ISOCHRONE_LAYER_ID)) {
-                console.warn("[Isochrone] Layer still exists. Removing before adding new one.");
+                console.warn('[Isochrone] Layer still exists. Removing before adding new one.');
                 map.removeLayer(ISOCHRONE_LAYER_ID);
             }
 
@@ -306,20 +338,20 @@ async function fetchAndDisplayIsochrone(longitude, latitude) {
                 type: 'geojson',
                 data: isochroneData
             });
-            console.log("[Isochrone] Source added:", ISOCHRONE_SOURCE_ID);
+            console.log('[Isochrone] Source added:', ISOCHRONE_SOURCE_ID);
 
             map.addLayer({
                 id: ISOCHRONE_LAYER_ID,
-                type: 'fill', // Tipo correto para polígonos preenchidos no Mapbox GL JS
+                type: 'fill',
                 source: ISOCHRONE_SOURCE_ID,
                 paint: {
-                    'fill-color': '#5500cf', //Roxo
+                    'fill-color': '#5500cf',
                     'fill-opacity': 0.4
                 },
             }, getFirstSymbolLayerId());
-            console.log("[Isochrone] Layer added:", ISOCHRONE_LAYER_ID);
+            console.log('[Isochrone] Layer added:', ISOCHRONE_LAYER_ID);
         } else {
-            console.warn("[Isochrone] Map style not fully loaded when trying to add. This is unexpected if called after map 'load' event.");
+            console.warn('[Isochrone] Map style not fully loaded when trying to add. This is unexpected if called after map load event.');
         }
     } catch (error) {
         console.error('[Isochrone] Error in fetchAndDisplayIsochrone function:', error);
@@ -592,16 +624,8 @@ map.on('load', () => {
             'type': 'fill-extrusion',
             'minzoom': 14,
             'paint': {
-                // Usa tons de azul claro para harmonizar os edifícios 3D com o mapa base
-                'fill-extrusion-color': [
-                    'match',
-                    ['get', 'type'],
-                    'education', '#8fc7ff',
-                    'commercial', '#a9d6ff',
-                    'residential', '#c2e2ff',
-                    'government', '#7fb8f5',
-                    '#9dceff'
-                ],
+                // Usa um azul claro uniforme para os edifícios 3D
+                'fill-extrusion-color': '#a9d1ff',
                 'fill-extrusion-height': [
                     'interpolate', ['linear'], ['zoom'],
                     14, 0,
@@ -621,6 +645,8 @@ map.on('load', () => {
         if (isMobile) {
             map.setLayoutProperty('osm-3d-buildings', 'visibility', 'none');
         }
+
+        applyBlueBuildingStyle();
     } catch (e) {
         console.error('Error adding OSM buildings:', e);
     }
