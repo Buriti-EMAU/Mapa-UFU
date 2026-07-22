@@ -1,9 +1,6 @@
-import { MAPBOX_ACCESS_TOKEN } from './config.js'; 
 import { addRectangleToMap } from './bloco1i.js';
 
-if (typeof MAPBOX_ACCESS_TOKEN === 'undefined') {
-    throw new Error("O Token de Acesso do Mapbox não está definido. Por favor, certifique-se de que o arquivo js/config.js foi criado, contém seu token e está incluído no seu HTML antes de main.js.");
-}
+const MAPBOX_ACCESS_TOKEN = 'pk.eyJ1Ijoicm9kcmlnb2ZyZWlyZSIsImEiOiJjbWI4MzEzb3owYTNoMm5vZHlmZGVuMHBjIn0.YW5S4TsQzzLEs4sUI-nkcA';
 
 // Define os limites de Uberlândia para restringir a visualização do mapa
 const UBERLANDIA_BOUNDS = [
