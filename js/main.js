@@ -1,6 +1,14 @@
 import { addRectangleToMap } from './bloco1i.js';
 
-const MAPBOX_ACCESS_TOKEN = 'pk.eyJ1Ijoicm9kcmlnb2ZyZWlyZSIsImEiOiJjbWI4MzEzb3owYTNoMm5vZHlmZGVuMHBjIn0.YW5S4TsQzzLEs4sUI-nkcA';
+const MAPBOX_ACCESS_TOKEN = (window.MAPBOX_ACCESS_TOKEN || 'pk.eyJ1Ijoicm9kcmlnb2ZyZWlyZSIsImEiOiJjbWI4MzEzb3owYTNoMm5vZHlmZGVuMHBjIn0.YW5S4TsQzzLEs4sUI-nkcA').trim();
+
+if (!window.mapboxgl) {
+    throw new Error('Mapbox GL JS nao foi carregado. Verifique o script mapbox-gl.js no index.html.');
+}
+
+if (!MAPBOX_ACCESS_TOKEN) {
+    throw new Error('MAPBOX_ACCESS_TOKEN vazio. Defina o token no js/main.js ou em window.MAPBOX_ACCESS_TOKEN.');
+}
 
 // Define os limites de Uberlândia para restringir a visualização do mapa
 const UBERLANDIA_BOUNDS = [
