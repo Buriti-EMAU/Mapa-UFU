@@ -592,15 +592,15 @@ map.on('load', () => {
             'type': 'fill-extrusion',
             'minzoom': 14,
             'paint': {
-                // Usa uma expressão de cor para tornar os edifícios mais visíveis
+                // Usa tons de azul claro para harmonizar os edifícios 3D com o mapa base
                 'fill-extrusion-color': [
                     'match',
                     ['get', 'type'],
-                    'education', '#4285F4', // Blue for educational buildings
-                    'commercial', '#EA4335', // Red for commercial buildings
-                    'residential', '#FBBC05', // Yellow for residential buildings
-                    'government', '#34A853', // Green for government buildings
-                    '#a13025'
+                    'education', '#8fc7ff',
+                    'commercial', '#a9d6ff',
+                    'residential', '#c2e2ff',
+                    'government', '#7fb8f5',
+                    '#9dceff'
                 ],
                 'fill-extrusion-height': [
                     'interpolate', ['linear'], ['zoom'],
