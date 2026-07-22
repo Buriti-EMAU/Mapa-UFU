@@ -253,9 +253,9 @@ function removeIsochrone() {
 
 function applyBlueBuildingStyle() {
     const buildingColors = {
-        fill: '#bfdcff',
+        fill: '#225088',
         outline: '#8ab8ee',
-        extrusion: '#a9d1ff'
+        extrusion: '#1b62b3'
     };
 
     map.getStyle().layers.forEach(layer => {
