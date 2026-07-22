@@ -37,8 +37,8 @@ window.addEventListener('resize', function() {
 mapboxgl.accessToken = MAPBOX_ACCESS_TOKEN;
 const map = new mapboxgl.Map({
     container: 'map',
-    // Usa um estilo que inclui dados de edifícios 3D
-    style: 'mapbox://styles/emauburiti/cmb8mw0oh015401qy4kri8jnm',
+    // Estilo tradicional do Mapbox como base
+    style: 'mapbox://styles/mapbox/streets-v12',
     center: [-48.258, -18.919], // Centraliza no campus UFU Santa Mônica
     zoom: isMobile ? 14.5 : 15, // Zoom ligeiramente menor em dispositivos móveis
     pitch: isMobile ? 0 : 45, // Começa com visualização 2D em dispositivos móveis
@@ -91,6 +91,22 @@ let currentPlaceId;
 
 const ISOCHRONE_SOURCE_ID = 'isochrone-source';
 const ISOCHRONE_LAYER_ID = 'isochrone-layer';
+
+function applyBlueTintBaseStyle() {
+    const tintRules = [
+        { id: 'background', prop: 'background-color', value: '#eaf2ff' },
+        { id: 'land', prop: 'fill-color', value: '#e3edff' },
+        { id: 'landcover', prop: 'fill-color', value: '#dce8ff' },
+        { id: 'water', prop: 'fill-color', value: '#8db9ff' },
+        { id: 'water-shadow', prop: 'fill-color', value: '#79a9f2' }
+    ];
+
+    tintRules.forEach(rule => {
+        if (map.getLayer(rule.id)) {
+            map.setPaintProperty(rule.id, rule.prop, rule.value);
+        }
+    });
+}
 
 // Carrega os dados dos locais
 async function loadPlacesData() {
@@ -545,6 +561,7 @@ function setupWelcomeModal() {
 // Inicializa o mapa quando carregado
 map.on('load', () => {
     console.log('Map loaded');
+    applyBlueTintBaseStyle();
     loadPlacesData();
     
     // Adiciona edifícios 3D diretamente aqui em vez de em uma função separada
