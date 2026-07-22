@@ -94,16 +94,27 @@ const ISOCHRONE_LAYER_ID = 'isochrone-layer';
 
 function applyBlueTintBaseStyle() {
     const tintRules = [
-        { id: 'background', prop: 'background-color', value: '#eaf2ff' },
-        { id: 'land', prop: 'fill-color', value: '#e3edff' },
-        { id: 'landcover', prop: 'fill-color', value: '#dce8ff' },
-        { id: 'water', prop: 'fill-color', value: '#8db9ff' },
-        { id: 'water-shadow', prop: 'fill-color', value: '#79a9f2' }
+        { ids: ['background'], type: 'background', prop: 'background-color', value: '#eaf2ff' },
+        { ids: ['land', 'landuse'], type: 'fill', prop: 'fill-color', value: '#e3edff' },
+        { ids: ['landcover'], type: 'fill', prop: 'fill-color', value: '#dce8ff' },
+        { ids: ['water'], type: 'fill', prop: 'fill-color', value: '#8db9ff' },
+        { ids: ['water-shadow'], type: 'fill', prop: 'fill-color', value: '#79a9f2' }
     ];
 
     tintRules.forEach(rule => {
-        if (map.getLayer(rule.id)) {
-            map.setPaintProperty(rule.id, rule.prop, rule.value);
+        const layerId = rule.ids.find(candidateId => {
+            const layer = map.getLayer(candidateId);
+            return layer && layer.type === rule.type;
+        });
+
+        if (!layerId) {
+            return;
+        }
+
+        try {
+            map.setPaintProperty(layerId, rule.prop, rule.value);
+        } catch (error) {
+            console.warn(`Nao foi possivel aplicar o tom azulado na camada ${layerId}.`, error);
         }
     });
 }
